@@ -1,0 +1,11 @@
+{
+    "name": "perel/gc-plastic",
+    "require": {
+        "slim/slim": "3.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "Src\\": "app/src"
+        }
+    }
+}
