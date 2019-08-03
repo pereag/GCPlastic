@@ -12,34 +12,39 @@ $configuration = [
 $c = new \Slim\Container($configuration);
 $app = new \Slim\App($c);
 
-$app->get('/', function($request, $response) {
-    $frontendController = new FrontendController();
-    echo $frontendController->accueil();
-});
+    $app->get('/', function($request, $response) {
+        $frontendController = new FrontendController();
+        echo $frontendController->accueil();
+    });
 
-$app->get('/services', function($request, $response) {
-    $frontendController = new FrontendController();
-    echo $frontendController->services();
-});
+    $app->get('/services', function($request, $response) {
+        $frontendController = new FrontendController();
+        echo $frontendController->services();
+    });
 
-$app->get('/parc-machines', function($request, $response) {
-    $frontendController = new FrontendController();
-    echo $frontendController->parcMachines();
-});
+    $app->get('/parc-machines', function($request, $response) {
+        $frontendController = new FrontendController();
+        echo $frontendController->parcMachines();
+    });
 
-$app->get('/articles', function($request, $response) {
-    $frontendController = new FrontendController();
-    echo $frontendController->articles();
-});
+    $app->get('/actualites', function($request, $response) {
+        $frontendController = new FrontendController();
+        echo $frontendController->actualites();
+    });
 
-$app->get('/articles/{id}', function($request, $response, $args) {
-    $frontendController = new FrontendController();
-    echo $frontendController->article($args['id']);
-});
+    $app->get('/actualites/{id}', function($request, $response, $args) {
+        $frontendController = new FrontendController();
+        if(!is_numeric($args['id']) || $args['id'] <= 0)
+        {
+            echo $frontendController->accueil();
+        } else {
+            echo $frontendController->actualite($args['id']);
+        } 
+    });
 
-$app->get('/contact', function($request, $response) {
-    $frontendController = new FrontendController();
-    echo $frontendController->contact();
-});
+    $app->get('/contact', function($request, $response) {
+        $frontendController = new FrontendController();
+        echo $frontendController->contact();
+    });
 
 $app->run();

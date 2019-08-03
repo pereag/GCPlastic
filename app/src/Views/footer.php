@@ -2,15 +2,15 @@
         <div class="fdiv fdiv-1">
         </div>
         <div class="fdiv fdiv-2">
-            <img src="public/images/location.png" alt="Image localisation">
+            <img src="<?= $this->imagesPath; ?>/location.png" alt="Image localisation">
             <span>9 Rue des Rubis,<br> 38280 Villette d'Anthon</span>
         </div>
         <div class="fdiv fdiv-3">
-            <img src="public/images/envelope.png" alt="Image email">
+            <img src="<?= $this->imagesPath; ?>/envelope.png" alt="Image email">
             <span>Contact@gcplastic.com</span>
         </div>
         <div class="fdiv fdiv-4">
-            <img src="public/images/telephone.png" alt="Image Téléphone">
+            <img src="<?= $this->imagesPath; ?>/telephone.png" alt="Image Téléphone">
             <span>04 78 31 18 31</span>
         </div>
         <div class="fdiv fdiv-5">

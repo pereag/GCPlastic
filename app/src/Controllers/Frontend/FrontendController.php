@@ -4,28 +4,43 @@ namespace Src\Controllers\Frontend;
 
 
 class FrontendController {
+
+    function __construct() {
+        $this->imagesPath = "http://localhost:8001/public/images"; 
+    }
     public function accueil() 
     {
-        require_once "src/Views/frontend/accueil.php";
+        require_once "./src/Views/frontend/accueil.php";
+        $imagesPath = $this->imagesPath;
     }
     public function services()
     {
-        return 'page services';
+        require_once "./src/Views/frontend/services.php";
+        $imagesPath = $this->imagesPath;
+
     }
     public function parcMachines()
     {
-        return 'page parc machines';
+        require_once "./src/Views/frontend/parcMachines.php";
+        $imagesPath = $this->imagesPath;
+
     }
-    public function articles()
+    public function actualites()
     {
-        return 'page articles';
+        require_once "./src/Views/frontend/actualites.php";
+        $imagesPath = $this->imagesPath;
+
     }
-    public function article($id)
+    public function actualite($id)
     {
         return 'page article '.$id;
+        $imagesPath = $this->imagesPath;
+
     }
     public function contact()
     {
-        return 'page contact';
+        require_once "./src/Views/frontend/contact.php";
+        $imagesPath = $this->imagesPath;
+
     }
 }
