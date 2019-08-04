@@ -12,7 +12,7 @@
         <input type="text" name="society" placeholder="Société">
         <input type="email" name="email" placeholder="Email">
         <input type="textarea" name="message" placeholder="Message">
-        <button type="submit" class="btn-yello">Envoyer</button>
+        <button type="submit" class="btn-yellow">Envoyer</button>
     </form>
 </section>
 

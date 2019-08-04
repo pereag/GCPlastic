@@ -14,7 +14,7 @@
     <img class="pimg-tools" src="" alt="Image fraise">
     <div class="p-text">
         <h2>QUI SOMME NOUS ?</h2>
-        <hr class="yello-hr">
+        <hr class="yellow-hr">
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Laboriosam explicabo veritatis similique quaerat laudantium,

@@ -6,7 +6,7 @@
 ?>
     <section class="park">
         <h2 id="park-title">Fraisage</h2>
-        <hr class="yello-hr">
+        <hr class="yellow-hr">
         <div class="park-nav">
             <img class="btn-arrow-left" id="pbtn-arrow-left" src="" alt="Fleche de gauche">
             <div class="pnav-left">

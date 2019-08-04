@@ -11,20 +11,32 @@
     <header>
         <img class="logo" src="#" alt="Logo GC Plastic">
         <nav class="hnav">
-            <div class="hnav-accueil">
-                ACCUEIL
+            <div class="hnav-accueil hnav-a">
+                <a href="">
+                    ACCUEIL
+                </a>
             </div>
-            <div class="hnav-services">
-                SERVICES
+            
+            <div class="hnav-services hnav-a">
+                <a href="">
+                    SERVICES
+                </a>
             </div>
-            <div class="hnav-machines">
-                PARC MACHINES
+            <div class="hnav-machines hnav-a">
+                <a href="">
+                    PARC MACHINES
+                </a>
             </div>
-            <div class="hnav-articles">
-                ARTICLES
+            <div class="hnav-actualites hnav-a">
+                <a href="">
+                    ACTUALITES
+                </a>
             </div>
-            <div class="hnav-contact">
-                CONTACT
+            <div class="hnav-contact hnav-a">
+                <a href="">
+                    CONTACT
+                </a>
             </div>
         </nav>
     </header>
+    <div class="out-header"></div>

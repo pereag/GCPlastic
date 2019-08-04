@@ -27,7 +27,7 @@
 
     <div id="Tools-content">
         <h2>CONCEPTION ET REALISATION D'OUTILLAGES</h2>
-        <hr class="yello-hr">
+        <hr class="yellow-hr">
         <p>Nous nous chargons de l'etude et de la fabrication de vos moules aciers ou aluminiums, utilisées pour l'obtention de 
          pièces plastiques ou cire perdue. Notre savoir-faire nous permet de vous garantir des outillages de qualité, pour un résultat optimum de vos piéces.</p>
          <div class="images-groupe">
@@ -37,7 +37,7 @@
     </div>
     <div id="maintenance-content">
         <h2>MODIFICATION, REPARATION ET MAINTENANCE</h2>
-        <hr class="yello-hr">
+        <hr class="yellow-hr">
         <p>Nous nous chargons de l'etude et de la fabrication de vos moules aciers ou aluminiums, utilisées pour l'obtention de 
          pièces plastiques ou cire perdue. Notre savoir-faire nous permet de vous garantir des outillages de qualité, pour un résultat optimum de vos piéces.</p>
          <div class="images-groupe">
@@ -47,7 +47,7 @@
     </div>
     <div id="erosion-content">
         <h2>DECOUPE A FIL ELECTRO-EROSION</h2>
-        <hr class="yello-hr">
+        <hr class="yellow-hr">
         <p>Nous nous chargons de l'etude et de la fabrication de vos moules aciers ou aluminiums, utilisées pour l'obtention de 
          pièces plastiques ou cire perdue. Notre savoir-faire nous permet de vous garantir des outillages de qualité, pour un résultat optimum de vos piéces.</p>
          <div class="images-groupe">
@@ -57,7 +57,7 @@
     </div>
     <div id="prototypes-content">
         <h2>CONCEPTION ET REALISATION DE PROTOTYPES</h2>
-        <hr class="yello-hr">
+        <hr class="yellow-hr">
         <p>Nous nous chargons de l'etude et de la fabrication de vos moules aciers ou aluminiums, utilisées pour l'obtention de 
          pièces plastiques ou cire perdue. Notre savoir-faire nous permet de vous garantir des outillages de qualité, pour un résultat optimum de vos piéces.</p>
          <div class="images-groupe">
