@@ -5,9 +5,9 @@
 
 <section class="slidershow">
     <div id="slidershow-content">
-        <img id="sarrow-left"src="" alt="Fleche gauche">
-        <img id="spause" src="" alt="pause">
-        <img id="sarrow-right" src="" alt="Flèche droite">
+        <img id="sarrow-left" src="<?= $this->imagesPath ?>/arrow-left.png" alt="Fleche gauche">
+        <img id="spause" src="<?= $this->imagesPath ?>/arrow-right.png" alt="pause">
+        <img id="sarrow-right" src="<?= $this->imagesPath ?>/pause.png" alt="Flèche droite">
     </div>
 </section>
 <section class="presentation">
