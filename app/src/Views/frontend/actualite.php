@@ -5,15 +5,19 @@
     require_once "./src/Views/banner.php";
 ?>
 <div class="container">
-    <section id="new">
-        <div class="image-groupe">
-            <img src="<?= $this->path; ?>/public/images/arrow-left.png" alt="Fleche de gauche">
-            <img src="" alt="Photo de l'articles">
-            <img src="<?= $this->path; ?>/public/images/arrow-right.png" alt="Fleche de droite">
+    <section class="new">
+        <div class="images-groupe new-image-groupe">
+            <div class="vertical-align">
+                <img class="new-arrow-left" src="<?= $this->path; ?>/public/images/arrow-left.png" alt="Fleche de gauche">
+            </div>
+            <img class="new-image" src="" alt="Photo de l'articles">
+            <div class="vertical-align">
+                <img class="new-arrow-right" src="<?= $this->path; ?>/public/images/arrow-right.png" alt="Fleche de droite">
+            </div>
         </div>
-        <div class="new-text">
-            <h3>TITLE</h3>
-            <p>
+        <div class="new-txt">
+            <h3 id="new-txt-title">TITLE</h3>
+            <p id="new-txt-p">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, pariatur distinctio
                 beatae sed impedit voluptatum repellendus dignissimos incidunt sequi doloremque
                 exercitationem blanditiis iusto qui assumenda consequuntur reiciendis consectetur quasi totam.

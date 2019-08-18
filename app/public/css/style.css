@@ -20,9 +20,8 @@ h2 {
     font-weight: bold;
 }
 p{
+    color: #424242;
     font-size: 22px;
-    margin: 20px 0px 15px 0px;
-    color: #2e2e2e;
 }
 .hr-yellow {
     background-color: #FFE814;
@@ -35,7 +34,10 @@ p{
 }
 .hr-center {
     width: 150px;
-
+}
+.hr-presentation {
+    width: 134px;
+    margin-left: 0;
 }
 a {
     color: white;
@@ -50,11 +52,10 @@ a:active {
 .container {
     padding-top: 70px;
     padding-bottom: 100px;
-    min-height: 600px;
     background-color: #F3F3F3;
 }
 input[type=text], input[type=email], input[type=textarea], textarea{
-    margin: 20px;
+    margin: 20px 0px 20px 0px;
     padding: 20px;
     background-color: white;
     border: none;
@@ -65,7 +66,6 @@ textarea {
     font-family: Cantarell;
 }
 .btn-yellow {
-    width: 200px;
     margin: 25px auto 25px auto;
     padding: 1.5rem;
     background-color: #FFD814;
@@ -74,6 +74,9 @@ textarea {
     color: white;
     font-size: 18px;
     font-weight: bold;
+}
+.btn-medium {
+    width: 200px;
 }
 .btn-large {
     width: 400px;
@@ -87,7 +90,14 @@ textarea {
 .services-nav-block, .btn-yellow {
     cursor: pointer;
 }
-
+.images-groupe{
+    display: flex;
+    justify-content: space-between;
+}
+.vertical-align {
+    display: table-cell;
+    vertical-align: middle;
+}
 /*--------------------------------------------------------------------------------------------------------------------------
                                                         Header
 ----------------------------------------------------------------------------------------------------------------------------*/
@@ -198,11 +208,180 @@ footer {
 .fdiv-white {
     padding-top: 55px;
 }
-
 /*--------------------------------------------------------------------------------------------------------------------------
-                                                        Home
+                                                        Accueil
 ----------------------------------------------------------------------------------------------------------------------------*/
+#slidershow {
+    height: 586px;
+    width: 100%;
+    background: grey;
 
+}
+.slidershow-content {
+    display: flex;
+    justify-content: space-between;
+    margin: auto 60px auto 60px;
+    padding-top: 242px;
+    
+}
+.presentation {
+    display: flex;
+    height: 851px;
+}
+.pimg-tools {
+    width: 921px;
+}
+.p-text {
+    padding: 50px;
+}
+.p-text {
+    width: 800px;
+}
+.last-new {
+    text-align: center;
+    background-color: #ECECEC;
+}
+#lnew-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 540px;
+    width: 1300px;
+    background: #838383;
+    margin: 40px auto 30px auto;
+}
+.lnew-content-txt {
+    height: 185px;
+    text-align: left;
+    padding: 30px;
+    background-color: black;
+    color: #ffffff;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.lnew-content-txt:hover {
+    opacity: 1;
+}
+.lnew-content-txt:active {
+    opacity: 0.7;
+}
+#lnc-txt-p {
+    color: white;
+}
+#spause {
+    margin-right: 20px;
+}
+#sarrow-left, #sarrow-right, #spause {
+    opacity: 0.8;
+    cursor: pointer;
+}
+#sarrow-left:hover, #sarrow-right:hover, #spause:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+#sarrow-left:active, #sarrow-right:active, #spause:active {
+    opacity: 0.7;
+    cursor: pointer;
+}
+/*--------------------------------------------------------------------------------------------------------------------------
+                                                        Parc machines
+----------------------------------------------------------------------------------------------------------------------------*/
+.park {
+    margin:auto;
+    text-align: center;
+}
+#park-p {
+    text-align: left;
+}
+#park-list {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #2D2B2B;
+    text-align: left;
+    color: white;
+}
+#park-p, #park-list {
+    width:80%;
+    margin: auto;
+}
+#park-list h4 {
+    font-size: 22px;
+}
+#park-list h5 {
+    font-size: 19px;
+    color: #b8b8b8;
+}
+#park-list p {
+    color: #888888;
+    font-size: 17px;
+}
+.park-list-content{
+    margin: 4%;
+}
+.park-nav {
+    display: flex;
+    justify-content: space-between;
+}
+.pnav-left, .pnav-center, .pnav-right {
+    display: flex;
+    flex-direction: column;
+}
+#pnav-left-img, #pnav-right-img {
+    width: 300px;
+    height: 150px;
+    background: gray;
+}
+#pnav-center-img {
+    width: 400px;
+    height: 200px;
+    background: grey;
+}
+/*--------------------------------------------------------------------------------------------------------------------------
+                                                        actualités
+----------------------------------------------------------------------------------------------------------------------------*/
+.news .container {
+    text-align: center;
+}
+/*--------------------------------------------------------------------------------------------------------------------------
+                                                        actualité
+----------------------------------------------------------------------------------------------------------------------------*/
+.new {
+    text-align: center;
+}
+.new-arrow-left .new-arrow-right .new-image {
+    width: 40px;
+    height: 65px;
+    margin-top: 50vh;
+}
+.new-arrow-left:hover, .new-arrow-right:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+.new-arrow-left:active, .new-arrow-right:active{
+    opacity: 1;
+}
+.new-image {
+    width:1200px;
+    height: 500px;
+    background-color: grey;
+    margin: 30px 0px 30px 0px;
+}
+.new-image-groupe {
+    width: 1400px;
+    margin: auto;
+}
+.new-txt {
+    width: 1100px;
+    margin: 0px auto 20px auto;
+    padding: 30px 50px 50px 50px;
+    background-color: #2D2B2B;
+    color: white;
+    text-align: left;
+}
+#new-txt-p{ color: white; }
+.vertical-align {
+    margin: auto;
+}
 /*--------------------------------------------------------------------------------------------------------------------------
                                                         Contact
 ----------------------------------------------------------------------------------------------------------------------------*/
@@ -210,13 +389,15 @@ footer {
     display: flex;
     flex-direction: column;
     margin: auto;
-    width: 1200px;
+    width: 63%;
 }
-
+.contact-mail {
+    color: #ffc400;
+}
 /*--------------------------------------------------------------------------------------------------------------------------
                                                         Services
 ----------------------------------------------------------------------------------------------------------------------------*/
-.services-nav {
+#services-nav {
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -228,8 +409,10 @@ footer {
     position: relative;
     width: 24%;
     height: 370px;
+    padding: auto;
 }
 .snav-block-content {
+    width: 80%;
     padding:10%;
     position: absolute;
     top:50%;
@@ -244,9 +427,9 @@ footer {
 #maintenance:hover {background-color: #3f3f3f;}
 #maintenance:active {background-color: #4e4e4e;}
 
-#erosion {background-color: #5f5f5f;}
-#erosion:hover {background-color: #6b6b6b;}
-#erosion:active {background-color: #808080;}
+#machining {background-color: #5f5f5f;}
+#machining:hover {background-color: #6b6b6b;}
+#machining:active {background-color: #808080;}
 
 #prototype {background-color: #969696;}
 #prototype:hover {background-color: #a5a5a5;}
@@ -266,10 +449,6 @@ footer {
 }
 .sdescription-content-txt {
     text-align: left;
-}
-.images-groupe{
-    display: flex;
-    justify-content: space-between;
 }
 .services-img {
     background: #c4c4c4;

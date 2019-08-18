@@ -12,28 +12,28 @@
         <img class="logo" src="#" alt="Logo GC Plastic">
         <nav class="hnav">
             <div class="hnav-accueil hnav-a">
-                <a href="">
+                <a href="<?= $this->path ?>">
                     ACCUEIL
                 </a>
             </div>
             
             <div class="hnav-services hnav-a">
-                <a href="">
+                <a href="<?= $this->path ?>/services">
                     SERVICES
                 </a>
             </div>
             <div class="hnav-machines hnav-a">
-                <a href="">
+                <a href="<?= $this->path ?>/parc-machines">
                     PARC MACHINES
                 </a>
             </div>
             <div class="hnav-actualites hnav-a">
-                <a href="">
+                <a href="<?= $this->path ?>/actualites">
                     ACTUALITES
                 </a>
             </div>
             <div class="hnav-contact hnav-a">
-                <a href="">
+                <a href="<?= $this->path ?>/contact">
                     CONTACT
                 </a>
             </div>

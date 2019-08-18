@@ -6,7 +6,9 @@
 ?>
 
 <section class="news">
-    <p id="news-message">Aucun articles disponnibles pour le momment.</p>
+    <div class="container">
+        <p id="news-message">Aucun article disponible pour le momment.</p>
+    </div>
 </section>
 
 <?php require_once "./src/Views/footer.php";

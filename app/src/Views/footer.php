@@ -7,22 +7,24 @@
         </div>
         <div class="fdiv fdiv-rborder fdiv-3">
             <img class="fdiv-icon fdiv-icon-mail " src="<?= $this->path; ?>/public/images/envelope.png" alt="Image email">
-            <span>Contact@gcplastic.com</span>
+            <span>Gcplastic@gcplastic.fr</span>
         </div>
         <div class="fdiv fdiv-rborder fdiv-4">
             <img class="fdiv-icon fdiv-icon-phone " src="<?= $this->path; ?>/public/images/telephone.png" alt="Image Téléphone">
             <span>04 78 31 18 31</span>
         </div>
         <div class="fdiv fdiv-white fdiv-5">
-        <span><a href="">Administration</a></span>
+        <span><a href="<?= $this->path; ?>/admin">Administration</a></span>
             <span>Copyright © 2019</span><br>
             <span>GC Plastic</span><br>
             <span>Tous droits réservés</span><br>
-            <span><a href="">Mentions légales</a></span>
+            <span><a href="<?= $this->path; ?>/legalNotice">Mentions légales</a></span>
         </div>
         <div class="fdiv fdiv-6">
 
         </div>
     </footer>
+    <script type="text/javascript"src="<?= $this->path; ?>/public/js/ServicesNav.js"></script>
+    <script type="text/javascript"src="<?= $this->path; ?>/public/js/main.js"></script>
 </body>
 </html>
