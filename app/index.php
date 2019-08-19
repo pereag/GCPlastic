@@ -47,4 +47,9 @@ $app = new \Slim\App($c);
         echo $frontendController->contact();
     });
 
+    $app->get('/admin', function($request, $response) {
+        $frontendController = new FrontendController();
+        echo $frontendController->admin();
+    });
+
 $app->run();

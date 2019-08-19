@@ -7,7 +7,7 @@
 
 <div class="container">
     <section class="contact">
-        <form class="contact-form" action="" method="">
+        <form class="form" action="" method="">
             <p>Vous pouvez nous contacter en remplissant le formulaire ou par mail en cliquant sur cette adresse: <a class="contact-mail" href="mailto:gcplastic@gcplastic.fr, mailto:david@gcplastic.fr">Gcplastic@gcplastic.fr</a></p>
             <input type="text" name="lastname" placeholder="NOM" required>
             <input type="text" name="firstname" placeholder="PRENOM" required>

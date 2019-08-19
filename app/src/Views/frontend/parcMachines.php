@@ -6,22 +6,24 @@
 ?>
     <div class="container">
         <section class="park">
-            <h2 id="park-title">Fraisage</h2>
+            <h2 id="park-title">FRAISAGE</h2>
             <hr class="hr-yellow hr-center">
             <div class="park-nav">
-                <img class="btn-arrow-left" id="pbtn-arrow-left" src="" alt="Fleche de gauche">
-                <div class="pnav-left">
-                    <h3 id="pnav-left-titre">Tours</h3>
-                    <img id="pnav-left-img" src="" alt="images tours">
+                <div class="vertical-align">
+                    <img class="btn-arrow-left" id="pbtn-arrow-left" src="<?= $this->path ?>/public/images/arrow-left.png" alt="Fleche de gauche">
                 </div>
-                <div class="pnav-center">
-                    <img id="pnav-center-img" src="" alt="Image fraiseuse">
+                <div class="nav-left">
+                    <img id="nav-left-img" src="" alt="images tours">
                 </div>
-                <div class="pnav-right">
-                    <h3 id="pnav-right-titre">Electro-erosion</h3>
-                    <img id="pnav-right-img" src="" alt="images electro-erosion">
+                <div class="nav-center">
+                    <img id="nav-center-img" src="" alt="Image fraiseuse">
                 </div>
-                <img class="btn-arrow-right" id="pbtn-arrow-right" src="" alt="Fleche de doite">
+                <div class="nav-right">
+                    <img id="nav-right-img" src="" alt="images electro-erosion">
+                </div>
+                <div class="vertical-align">
+                    <img class="btn-arrow-right" id="pbtn-arrow-right" src="<?= $this->path ?>/public/images/arrow-right.png" alt="Fleche de doite">
+                </div>
             </div>
             <p id="park-p">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quasi ipsa, quaerat eligendi id ullam magnam facilis! Vel impedit eum facere adipisci.Lorem ipsum dolor sit amet consectetur adipisicing elit.

@@ -43,4 +43,10 @@ class FrontendController {
         $path = $this->path;
 
     }
+    public function admin()
+    {
+        require_once "./src/Views/frontend/adminForm.php";
+        $path = $this->path;
+
+    }
 }

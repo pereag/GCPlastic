@@ -54,7 +54,7 @@ a:active {
     padding-bottom: 100px;
     background-color: #F3F3F3;
 }
-input[type=text], input[type=email], input[type=textarea], textarea{
+input[type=text], input[type=email], input[type=password], textarea{
     margin: 20px 0px 20px 0px;
     padding: 20px;
     background-color: white;
@@ -97,6 +97,12 @@ textarea {
 .vertical-align {
     display: table-cell;
     vertical-align: middle;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 63%;
 }
 /*--------------------------------------------------------------------------------------------------------------------------
                                                         Header
@@ -299,8 +305,10 @@ footer {
     background-color: #2D2B2B;
     text-align: left;
     color: white;
+    width:80%;
+    margin: 30px auto 30px auto;
 }
-#park-p, #park-list {
+#park-p {
     width:80%;
     margin: auto;
 }
@@ -320,21 +328,41 @@ footer {
 }
 .park-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
-.pnav-left, .pnav-center, .pnav-right {
+.nav-left, .nav-center, .nav-right {
     display: flex;
     flex-direction: column;
 }
-#pnav-left-img, #pnav-right-img {
-    width: 300px;
-    height: 150px;
-    background: gray;
-}
-#pnav-center-img {
+#nav-left-img, #nav-right-img {
     width: 400px;
     height: 200px;
+    background: gray;
+    opacity: 0.8;
+    cursor: pointer;
+}
+#nav-center-img {
+    width: 500px;
+    height: 250px;
     background: grey;
+}
+#nav-left-img, #nav-right-img {
+    margin-top: 25px;
+}
+.park-nav {
+    margin: 30px;
+}
+#pbtn-arrow-left, #pbtn-arrow-right {
+    width: 40px;
+    height: 70px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+#pbtn-arrow-left:hover, #pbtn-arrow-right:hover, #nav-left-img:hover, #nav-right-img:hover {
+    opacity: 1;
+}
+#pbtn-arrow-left:active, #pbtn-arrow-right:active, #nav-left-img:active, #nav-right-img:active {
+    opacity: 0.8;
 }
 /*--------------------------------------------------------------------------------------------------------------------------
                                                         actualités
@@ -380,17 +408,12 @@ footer {
 }
 #new-txt-p{ color: white; }
 .vertical-align {
-    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 /*--------------------------------------------------------------------------------------------------------------------------
                                                         Contact
 ----------------------------------------------------------------------------------------------------------------------------*/
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 63%;
-}
 .contact-mail {
     color: #ffc400;
 }

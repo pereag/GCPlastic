@@ -1,5 +1,6 @@
 class ServicesNav {
-    constructor(servicesNav, btnTools, btnMaintenance, btnMachining, btnPrototype, toolsContent, maintenanceContent, machiningContent, prototypeContent){
+    constructor(servicesNav, btnTools, btnMaintenance, btnMachining, btnPrototype,
+                toolsContent, maintenanceContent, machiningContent, prototypeContent){
         this.servicesNav = servicesNav;
         this.btnTools = btnTools;
         this.btnMaintenance = btnMaintenance;
