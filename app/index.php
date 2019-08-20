@@ -2,6 +2,7 @@
 require_once "../vendor/autoload.php";
 
 use \Src\Controllers\Frontend\FrontendController;
+use \Src\Controllers\Backend\BackendController;
 
 $configuration = [
     'settings' => [
@@ -14,7 +15,7 @@ $app = new \Slim\App($c);
 
     $app->get('/', function($request, $response) {
         $frontendController = new FrontendController();
-        echo $frontendController->accueil();
+        echo $frontendController->home();
     });
 
     $app->get('/services', function($request, $response) {
@@ -22,23 +23,23 @@ $app = new \Slim\App($c);
         echo $frontendController->services();
     });
 
-    $app->get('/parc-machines', function($request, $response) {
+    $app->get('/park', function($request, $response) {
         $frontendController = new FrontendController();
-        echo $frontendController->parcMachines();
+        echo $frontendController->park();
     });
 
-    $app->get('/actualites', function($request, $response) {
+    $app->get('/news', function($request, $response) {
         $frontendController = new FrontendController();
-        echo $frontendController->actualites();
+        echo $frontendController->news();
     });
 
-    $app->get('/actualites/{id}', function($request, $response, $args) {
+    $app->get('/news/{id}', function($request, $response, $args) {
         $frontendController = new FrontendController();
         if(!is_numeric($args['id']) || $args['id'] <= 0)
         {
-            echo $frontendController->accueil();
+            echo $frontendController->home();
         } else {
-            echo $frontendController->actualite($args['id']);
+            echo $frontendController->new($args['id']);
         } 
     });
 
@@ -50,6 +51,23 @@ $app = new \Slim\App($c);
     $app->get('/admin', function($request, $response) {
         $frontendController = new FrontendController();
         echo $frontendController->admin();
+    });
+
+/*---------------------------BACKEND--------------------------------*/
+
+    $app->get('/articlesManagement', function($request, $response) {
+        $backendController = new BackendController();
+        echo $backendController->articlesManagement();
+    });
+
+    $app->get('/newArticle', function($request, $response) {
+        $backendController = new BackendController();
+        echo $backendController->newArticle();
+    });
+
+    $app->get('/updateArticle', function($request, $response) {
+        $backendController = new BackendController();
+        echo $backendController->updateArticle();
     });
 
 $app->run();

@@ -1,6 +1,8 @@
 <?php 
     $title = "Services";
     $bannerTitle = "SERVICES";
+    $script = '<script type="text/javascript"src="<?= $this->path; ?>/public/js/ServicesNav.js"></script>
+    <script type="text/javascript"src="<?= $this->path; ?>/public/js/main.js"></script>';
     require_once "./src/Views/header.php";
     require_once "./src/Views/banner.php";
 ?>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="<?= $this->path; ?>/public/css/style.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
     <title>GC Plastic | <?php echo $title ?></title>
 </head>
 <body>
@@ -23,12 +24,12 @@
                 </a>
             </div>
             <div class="hnav-machines hnav-a">
-                <a href="<?= $this->path ?>/parc-machines">
+                <a href="<?= $this->path ?>/park">
                     PARC MACHINES
                 </a>
             </div>
             <div class="hnav-actualites hnav-a">
-                <a href="<?= $this->path ?>/actualites">
+                <a href="<?= $this->path ?>/news">
                     ACTUALITES
                 </a>
             </div>
@@ -40,3 +41,5 @@
         </nav>
     </header>
     <div class="out-header"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>

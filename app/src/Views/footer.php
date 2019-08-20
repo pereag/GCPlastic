@@ -24,7 +24,10 @@
 
         </div>
     </footer>
-    <script type="text/javascript"src="<?= $this->path; ?>/public/js/ServicesNav.js"></script>
-    <script type="text/javascript"src="<?= $this->path; ?>/public/js/main.js"></script>
+<?php if(isset($servicesScript) && $servicesScript){
+    ?> 
+        <script type="text/javascript"src="<?= $this->path; ?>/public/js/ServicesNav.js"></script>
+        <script type="text/javascript"src="<?= $this->path; ?>/public/js/main.js"></script>
+    <?php } ?>
 </body>
 </html>

@@ -8,32 +8,33 @@ class FrontendController {
     function __construct() {
         $this->path = "http://localhost:8001"; 
     }
-    public function accueil() 
+    public function home() 
     {
-        require_once "./src/Views/frontend/accueil.php";
+        require_once "./src/Views/frontend/home.php";
         $path = $this->path;
     }
     public function services()
     {
+        $servicesScript = true;
         require_once "./src/Views/frontend/services.php";
         $path = $this->path;
 
     }
-    public function parcMachines()
+    public function park()
     {
-        require_once "./src/Views/frontend/parcMachines.php";
+        require_once "./src/Views/frontend/park.php";
         $path = $this->path;
 
     }
-    public function actualites()
+    public function news()
     {
-        require_once "./src/Views/frontend/actualites.php";
+        require_once "./src/Views/frontend/news.php";
         $path = $this->path;
 
     }
-    public function actualite($id)
+    public function new($id)
     {
-        require_once "./src/Views/frontend/actualite.php";
+        require_once "./src/Views/frontend/newphp";
         $path = $this->path;
 
     }
