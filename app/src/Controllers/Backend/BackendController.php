@@ -10,6 +10,7 @@ class BackendController {
     }
     public function articlesManagement() 
     {
+        $datatableScript = true;
         require_once "./src/Views/backend/articlesManagement.php";
         $path = $this->path;
     }

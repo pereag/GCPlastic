@@ -367,6 +367,17 @@ footer {
 #pbtn-arrow-left:active, #pbtn-arrow-right:active, #nav-left-img:active, #nav-right-img:active {
     opacity: 0.8;
 }
+.park__active {
+    display: block;
+    opacity: 1;
+}
+.park__desable {
+    display: none;
+}
+.park__transition {
+    transition: opacity 10s;
+    opacity: 0;
+}
 /*--------------------------------------------------------------------------------------------------------------------------
                                                         actualités
 ----------------------------------------------------------------------------------------------------------------------------*/
@@ -486,10 +497,31 @@ footer {
     margin-top: 30px;
 }
 /*--------------------------------------------------------------------------------------------------------------------------
-                                                        article Manager
+                                                        Article Manager
 ----------------------------------------------------------------------------------------------------------------------------*/
 .articlesManager{ 
     margin: auto;
    text-align:center;
    width: 80%;
+}
+.articlesManager a {
+    color: #f5d51d;
+}
+.articlesManager a:hover {
+    color: #eeb312;
+}
+.articlesManager a:active {
+    color: #cccccc;
+}
+/*--------------------------------------------------------------------------------------------------------------------------
+                                                        Update article
+----------------------------------------------------------------------------------------------------------------------------*/
+.updateArticle-image {
+    background: grey;
+    width: 1040px;
+    height: 432px;
+    margin: 30px auto 30px auto;
+}
+.updateArticle-imageForm {
+    margin: auto auto 30px auto;
 }

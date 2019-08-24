@@ -8,7 +8,9 @@
     <form class="form" action="" methode="">
         <input type="text" placeholder="TITRE DE L'ARTICLE" required>
         <textarea placeholder="CONTENU" required></textarea>
-        <button class="btn-yellow btn-medium" rows="10" cols="33" type="submit">PUBLIER</button>
+        <label for="image">Image de l'article</label>
+        <input type="file">
+        <button class="btn-yellow btn-medium" type="submit">PUBLIER</button>
     </form>
     </div>
 

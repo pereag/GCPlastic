@@ -22,6 +22,7 @@ class FrontendController {
     }
     public function park()
     {
+        $parkScript = true;
         require_once "./src/Views/frontend/park.php";
         $path = $this->path;
 
