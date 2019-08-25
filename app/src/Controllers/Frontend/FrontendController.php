@@ -10,6 +10,7 @@ class FrontendController {
     }
     public function home() 
     {
+        $slideshowScript = true;
         require_once "./src/Views/frontend/home.php";
         $path = $this->path;
     }

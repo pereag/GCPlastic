@@ -30,9 +30,9 @@
             ?>
             <script type="text/javascript" src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
             <script type="text/javascript" src="<?= $this->path; ?>/public/js/ArticlesManagement.js"></script>       
-        <?php } if(isset($slidershowScript) && $slidershowScript) {
+        <?php } if(isset($slideshowScript) && $slideshowScript) {
             ?>
-            <script type="text/javascript" src="<?= $this->path ?>/public/js/Slidershow.js"></script>
+            <script type="text/javascript" src="<?= $this->path ?>/public/js/Slideshow.js"></script>
         <?php } if(isset($parkScript) && $parkScript) {
             ?>
             <script type="text/javascript" src="<?= $this->path ?>/public/js/Park.js"></script>

@@ -220,18 +220,16 @@ footer {
 /*--------------------------------------------------------------------------------------------------------------------------
                                                         Accueil
 ----------------------------------------------------------------------------------------------------------------------------*/
-#slidershow {
+#slideshow {
+    display: table;
     height: 586px;
     width: 100%;
-    background: grey;
-
+    background:"http://localhost:8001/public/images/image-1.jpg";
 }
-.slidershow-content {
+.slideshow-content {
     display: flex;
     justify-content: space-between;
-    margin: auto 60px auto 60px;
-    padding-top: 242px;
-    
+    margin: auto 60px auto 60px;   
 }
 .presentation {
     display: flex;
@@ -280,23 +278,36 @@ footer {
 #spause {
     margin-right: 20px;
 }
-#sarrow-left, #sarrow-right, #spause {
+#sarrow-left, #sarrow-right, #spause, #splay {
     opacity: 0.8;
     cursor: pointer;
 }
-#sarrow-left:hover, #sarrow-right:hover, #spause:hover {
+#sarrow-left:hover, #sarrow-right:hover, #spause:hover, #splay:hover {
     opacity: 1;
     cursor: pointer;
 }
-#sarrow-left:active, #sarrow-right:active, #spause:active {
+#sarrow-left:active, #sarrow-right:active, #spause:active, #splay:active {
     opacity: 0.7;
     cursor: pointer;
+}
+.sbutton-groupe {
+    display: flex;
+}
+.sstop-button__active {
+    display: block;
+}
+.sstop-button__desable {
+    display: none;
+}
+.sc-vertical-align {
+    display: table-cell;
+    vertical-align: middle;
 }
 /*--------------------------------------------------------------------------------------------------------------------------
                                                         Parc machines
 ----------------------------------------------------------------------------------------------------------------------------*/
 .park {
-    margin:auto;
+    margin: auto;
     text-align: center;
 }
 #park-p {
