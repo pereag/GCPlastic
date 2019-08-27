@@ -9,25 +9,25 @@
         <div id="services-nav">
             <div id="tools" class="services-nav-block">
                 <div class="snav-block-content">
-                    <h3>CONCEPTION & REALISATION D'OUTILLAGES FRANCE OU LOW COST</h3>
+                    <h3 class="snav-title">CONCEPTION & REALISATION D'OUTILLAGES FRANCE OU LOW COST</h3>
                     <span>En savoir plus</span>
                 </div>
             </div>
             <div id="maintenance" class="services-nav-block">
                 <div class="snav-block-content">
-                    <h3>MODIFICATION, REPARATION & MAINTENANCE</h3>
+                    <h3 class="snav-title">MODIFICATION, REPARATION & MAINTENANCE</h3>
                     <span>En savoir plus</span>
                 </div>
             </div>
             <div id="machining" class="services-nav-block">
                 <div class="snav-block-content">
-                    <h3>USINAGE A FACON</h3>
+                    <h3 class="snav-title">USINAGE A FACON</h3>
                     <span>En savoir plus</span>
                 </div>
             </div>
             <div id="prototype" class="services-nav-block">
                 <div class="snav-block-content">
-                    <h3>CONCEPTION ET REALISATION DE PROTOTYPES</h3>
+                    <h3 class="snav-title">CONCEPTION ET REALISATION DE PROTOTYPES</h3>
                     <span>En savoir plus</span>
                 </div>
             </div>

@@ -51,5 +51,5 @@ class Park {
    }
 }
 
-park = new Park($(".park"), $("#park-milling"), $("#park-tower"), $("#park-erosion"), $("#park-injection"), $("#park-grinding"), $(".btn-milling"), $(".btn-tower"), $(".btn-erosion"), $(".btn-injection"), $(".btn-grinding"));
+let park = new Park($(".park"), $("#park-milling"), $("#park-tower"), $("#park-erosion"), $("#park-injection"), $("#park-grinding"), $(".btn-milling"), $(".btn-tower"), $(".btn-erosion"), $(".btn-injection"), $(".btn-grinding"));
 park.play();

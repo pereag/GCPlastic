@@ -39,5 +39,5 @@ class ArticlesManagement {
     }
 }
 
-articlesManagement = new ArticlesManagement($("#tableArticles"));
+let articlesManagement = new ArticlesManagement($("#tableArticles"));
 articlesManagement.play();

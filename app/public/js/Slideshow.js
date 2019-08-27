@@ -188,5 +188,5 @@ class Slideshow {
     };
 };
 console.log("yolo")
-slideshow = new Slideshow(document.getElementById("slideshow"), document.getElementById("sarrow-left"), document.getElementById("sarrow-right"), document.getElementById("sstop-button"), document.getElementById("splay"), document.getElementById("spause"), "sstop-button__active", "sstop-button__desable", 5000)
+let slideshow = new Slideshow(document.getElementById("slideshow"), document.getElementById("sarrow-left"), document.getElementById("sarrow-right"), document.getElementById("sstop-button"), document.getElementById("splay"), document.getElementById("spause"), "sstop-button__active", "sstop-button__desable", 5000)
 slideshow.init();

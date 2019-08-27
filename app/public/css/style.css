@@ -107,6 +107,16 @@ textarea {
 textarea {
     height: 250px;
 }
+.btn-news {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.btn__desable {
+    background-color: grey;
+}
+.btn__desable:hover {
+    background-color: grey;
+}
 /*--------------------------------------------------------------------------------------------------------------------------
                                                         Header
 ----------------------------------------------------------------------------------------------------------------------------*/
@@ -248,7 +258,7 @@ footer {
     text-align: center;
     background-color: #ECECEC;
 }
-#lnew-content {
+#lnew-content, .news-content {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -257,7 +267,7 @@ footer {
     background: #838383;
     margin: 40px auto 30px auto;
 }
-.lnew-content-txt {
+.lnew-content-txt, .news-content-txt  {
     height: 185px;
     text-align: left;
     padding: 30px;
@@ -266,13 +276,13 @@ footer {
     opacity: 0.6;
     cursor: pointer;
 }
-.lnew-content-txt:hover {
+.lnew-content-txt:hover, .news-content-txt:hover {
     opacity: 1;
 }
-.lnew-content-txt:active {
+.lnew-content-txt:active, .news-content-txt:active {
     opacity: 0.7;
 }
-#lnc-txt-p {
+#lnc-txt-p, .news-txt-p {
     color: white;
 }
 #spause {
@@ -394,6 +404,19 @@ footer {
 ----------------------------------------------------------------------------------------------------------------------------*/
 .news .container {
     text-align: center;
+}
+#paging {
+    display: none;
+}
+.paging__active {
+    display: block !important;
+}
+.news-content__active {
+    display: flex;
+}
+
+.news-content__desable {
+    display: none;
 }
 /*--------------------------------------------------------------------------------------------------------------------------
                                                         actualité

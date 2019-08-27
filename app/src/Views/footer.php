@@ -36,6 +36,11 @@
         <?php } if(isset($parkScript) && $parkScript) {
             ?>
             <script type="text/javascript" src="<?= $this->path ?>/public/js/Park.js"></script>
+        <?php } if(isset($pagingScript) && $pagingScript) {
+            ?>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.min.js"></script>
+            <script type="text/javascript" src="<?= $this->path ?>/public/js/Page.js"></script>
+            <script type="text/javascript" src="<?= $this->path ?>/public/js/Paging.js"></script>
         <?php } ?>
     </body>
 </html>

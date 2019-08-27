@@ -30,6 +30,7 @@ class FrontendController {
     }
     public function news()
     {
+        $pagingScript = true;
         require_once "./src/Views/frontend/news.php";
         $path = $this->path;
 

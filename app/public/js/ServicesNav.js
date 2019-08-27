@@ -1,6 +1,6 @@
 class ServicesNav {
     constructor(servicesNav, btnTools, btnMaintenance, btnMachining, btnPrototype,
-                toolsContent, maintenanceContent, machiningContent, prototypeContent){
+                toolsContent, maintenanceContent, machiningContent, prototypeContent, anchor){
         this.servicesNav = servicesNav;
         this.btnTools = btnTools;
         this.btnMaintenance = btnMaintenance;
@@ -9,7 +9,8 @@ class ServicesNav {
         this.toolsContent = toolsContent;
         this.maintenanceContent = maintenanceContent;
         this.machiningContent = machiningContent;
-        this.prototypeContent = prototypeContent; 
+        this.prototypeContent = prototypeContent;
+        this.anchor = anchor;
     }
 
     play(){
@@ -19,7 +20,7 @@ class ServicesNav {
         this.clickbutton(this.btnPrototype);
     }
     clickbutton(btn){
-        btn.addEventListener("click", ()=>{
+        btn.addEventListener("click", () => {
             this.toolsContent.classList.replace("content__active", "content__desactive");
             this.maintenanceContent.classList.replace("content__active", "content__desactive");
             this.machiningContent.classList.replace("content__active", "content__desactive");
@@ -37,13 +38,19 @@ class ServicesNav {
             else if ( btn == this.btnPrototype) {
                 this.prototypeContent.classList.replace("content__desactive", "content__active");
             }
+            this.goToAnchor();
         })
+    }
+
+    goToAnchor() {
+        $("html, body").stop().animate( { scrollTop: this.anchor.offset().top }, 1500);
     }
 }
 
-servicesNav = new ServicesNav(document.getElementById("services-nav"), document.getElementById("tools"), document.getElementById("maintenance"),
+let servicesNav = new ServicesNav(document.getElementById("services-nav"), document.getElementById("tools"), document.getElementById("maintenance"),
                              document.getElementById("machining"), document.getElementById("prototype"),
                              document.getElementById("tools-content"), document.getElementById("maintenance-content"),
-                             document.getElementById("machining-content"), document.getElementById("prototype-content"));
+                             document.getElementById("machining-content"), document.getElementById("prototype-content"),
+                             $(".snav-title"));
 
 servicesNav.play();
