@@ -87,6 +87,5 @@ class Paging {
         }
     }
 }
-
 let paging = new Paging($("#page"), $(".news-content"), $("#paging"), $("#paging-previous"), $("#paging-next"), 2, $(".hr-yellow"))
 paging.play();

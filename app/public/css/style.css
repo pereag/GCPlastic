@@ -117,6 +117,32 @@ textarea {
 .btn__desable:hover {
     background-color: grey;
 }
+#loader {
+    display: table;
+    position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height:100%;
+        background-color:white;
+        z-index: 99;
+    
+}
+.desactive-loader {display: none !important;}
+.loader-content {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+#loader-icon {-webkit-animation: rotation 4s infinite linear;}
+    @-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
 /*--------------------------------------------------------------------------------------------------------------------------
                                                         Header
 ----------------------------------------------------------------------------------------------------------------------------*/
@@ -129,7 +155,7 @@ header {
     height: 80px;
     background-color: #2D2B2B;
     color: white;
-    z-index: 99999;
+    z-index: 99;
 
 }
 .out-header {
@@ -171,6 +197,9 @@ header {
     width: 50%;
     min-width: 500px;
     color: white;
+}
+#banner-title {
+    opacity: 0;
 }
 
 /*--------------------------------------------------------------------------------------------------------------------------

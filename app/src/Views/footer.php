@@ -22,6 +22,11 @@
             </div>
             <div class="fdiv fdiv-6"></div>
         </footer>
+        <div id="loader">
+            <div class="loader-content">
+                <img id="loader-icon" src="<?= $this->path; ?>/public/images/loader.png" draggable="false" alt="icone de chargement">
+            </div>
+        </div>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <?php if(isset($servicesScript) && $servicesScript) {
             ?> 
@@ -38,9 +43,11 @@
             <script type="text/javascript" src="<?= $this->path ?>/public/js/Park.js"></script>
         <?php } if(isset($pagingScript) && $pagingScript) {
             ?>
-            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.min.js"></script>
             <script type="text/javascript" src="<?= $this->path ?>/public/js/Page.js"></script>
             <script type="text/javascript" src="<?= $this->path ?>/public/js/Paging.js"></script>
+        <?php } if(isset($titleAnimationScript) && $titleAnimationScript) {?>
+            <script type="text/javascript" src="<?= $this->path ?>/public/js/TitleAnimation.js"></script>
         <?php } ?>
+        <script type="text/javascript" src="<?= $this->path ?>/public/js/Loader.js"></script>
     </body>
 </html>

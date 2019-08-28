@@ -16,6 +16,7 @@ class FrontendController {
     }
     public function services()
     {
+        $titleAnimationScript = true;
         $servicesScript = true;
         require_once "./src/Views/frontend/services.php";
         $path = $this->path;
@@ -23,6 +24,7 @@ class FrontendController {
     }
     public function park()
     {
+        $titleAnimationScript = true;
         $parkScript = true;
         require_once "./src/Views/frontend/park.php";
         $path = $this->path;
@@ -30,6 +32,7 @@ class FrontendController {
     }
     public function news()
     {
+        $titleAnimationScript = true;
         $pagingScript = true;
         require_once "./src/Views/frontend/news.php";
         $path = $this->path;
@@ -37,18 +40,21 @@ class FrontendController {
     }
     public function new($id)
     {
+        $titleAnimationScript = true;
         require_once "./src/Views/frontend/newphp";
         $path = $this->path;
 
     }
     public function contact()
     {
+        $titleAnimationScript = true;
         require_once "./src/Views/frontend/contact.php";
         $path = $this->path;
 
     }
     public function admin()
     {
+        $titleAnimationScript = true;
         require_once "./src/Views/frontend/adminForm.php";
         $path = $this->path;
 
