@@ -143,6 +143,12 @@ textarea {
 				-webkit-transform: rotate(359deg);
 		}
 }
+#tableArticles_wrapper {
+    box-shadow: grey 1px 4px 10px;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
 /*--------------------------------------------------------------------------------------------------------------------------
                                                         Header
 ----------------------------------------------------------------------------------------------------------------------------*/
@@ -171,8 +177,9 @@ header {
     margin-left:50px;
 }
 .logo {
-    background: #1f1f1f;
-    width: 200px;
+    background: #f9f9f9;
+    width: 220px;
+    height: 80px;
 }
 
 

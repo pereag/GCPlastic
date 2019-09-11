@@ -14,7 +14,6 @@ class ComposerStaticInitaf7547d552d03523fad96588ffdae60b
         'S' => 
         array (
             'Src\\' => 4,
-            'Slim\\' => 5,
         ),
         'P' => 
         array (
@@ -35,10 +34,6 @@ class ComposerStaticInitaf7547d552d03523fad96588ffdae60b
         'Src\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app/src',
-        ),
-        'Slim\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/slim/slim/Slim',
         ),
         'Psr\\Http\\Message\\' => 
         array (

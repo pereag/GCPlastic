@@ -11,10 +11,10 @@
 </head>
 <body>
     <header>
-        <img class="logo" src="#" alt="Logo GC Plastic">
+        <a href="<?= $this->path; ?>"><img class="logo" src="<?= $this->path; ?>/public/images/logo.png" alt="Logo GC Plastic"></a>
         <nav class="hnav">
             <div class="hnav-accueil hnav-a">
-                <a href="<?= $this->path ?>">
+                <a href="<?= $this->path ?>/home">
                     ACCUEIL
                 </a>
             </div>

@@ -6,7 +6,7 @@ namespace Src\Controllers\Frontend;
 class FrontendController {
 
     function __construct() {
-        $this->path = "http://localhost:8001"; 
+        $this->path = "http://localhost/GCPlastic/app"; 
     }
     public function home() 
     {

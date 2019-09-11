@@ -11,16 +11,16 @@ class Page {
 
     play(){
         let i = 0;
-
         while (i <= this.limitArticles) {
         // Afficher les articles correspondants
             $("#new-" + i).removeClass("news-content__desable");
             $("#new-" + i).addClass("news-content__active");  
             i++;  
         }
-        window.setInterval( () => {
+        
+        document.addEventListener("pageChange", () => {
             this.displayPage()
-        }, 50);
+        })
     }
     
     displayPage() {

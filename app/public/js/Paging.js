@@ -25,9 +25,13 @@ class Paging {
     // on ecoute le click des boutons 
         this.btnPrevious.click(() => {
             this.btnPreviousClick();
+            let event = new Event("pageChange", {bubbles: true}); 
+            document.dispatchEvent(event);   
         });
         this.btnNext.click(() => {
             this.btnNextClick();
+            let event = new Event("pageChange", {bubbles: true}); 
+            document.dispatchEvent(event); 
         });
     }
 

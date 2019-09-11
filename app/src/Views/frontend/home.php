@@ -32,7 +32,7 @@
 </section>
 <section class="last-new">
     <div class="container">
-        <h2>DERNIERE ACTUALITEE</h2>
+        <h2>DERNIERE ACTUALITE</h2>
         <hr class="hr-yellow hr-center">
         <div id="lnew-content">
             <div class="lnew-content-txt">
