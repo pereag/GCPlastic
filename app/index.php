@@ -4,55 +4,8 @@ require_once "../vendor/autoload.php";
 use \Src\Controllers\Frontend\FrontendController;
 use \Src\Controllers\Backend\BackendController;
 
-$router = new \Src\Router\Router($_GET['url']); 
-$router->get('/', function(){ 
-    $frontendController = new FrontendController();
-    echo $frontendController->home();
-}); 
-$router->get('/home', function(){ 
-    $frontendController = new FrontendController();
-    echo $frontendController->home();
-});
-$router->get('/services', function(){ 
-    $frontendController = new FrontendController();
-    echo $frontendController->services();
-});
-$router->get('/park', function(){ 
-    $frontendController = new FrontendController();
-    echo $frontendController->park();
-});
-$router->get('/news', function(){ 
-    $frontendController = new FrontendController();
-    echo $frontendController->news();
-});
-$router->get('/new/:id', function($id){ 
-    $frontendController = new FrontendController();
-    echo $frontendController->new();
-});
-$router->get('/contact', function(){ 
-    $frontendController = new FrontendController();
-    echo $frontendController->contact();
-});
-$router->get('/admin', function(){ 
-    $frontendController = new FrontendController();
-    echo $frontendController->admin();
-});
-// ------------------ Backend ---------------------
-$router->get('/articlesManagement', function(){ 
-    $backendController = new Backendcontroller();
-    echo $backendController->articlesManagement();
-});
-$router->get('/newArticle', function(){ 
-    $backendController = new BackendController();
-    $backendController->newArticle();
-});
-$router->get('/updateArticle/:id', function($id){ 
-    $backendController = new BackendController();
-    $backendController->updateArticle();
-});
-$router->run(); 
+session_start();
 
-/*
 try {
     if(!empty($_GET['action'])) {
         if($_GET['action'] == 'home') {
@@ -70,7 +23,7 @@ try {
         } elseif($_GET['action'] == 'new') {
             if(isset($_GET['id']) && $_GET['id'] > 0 ) {
                 $frontendController = new FrontendController();
-                echo $frontendController->new();
+                echo $frontendController->new($_GET['id']);
             }
             else {
                 throw new Exception('Article invalide ou inexistant.');
@@ -81,24 +34,39 @@ try {
         } elseif($_GET['action'] == 'admin') {
             $frontendController = new FrontendController();
             echo $frontendController->admin();
-        }
-
-          elseif($_GET['action'] == 'articlesManagement') {
-            $backendController == new Backendcontroller();
-            echo $backendController->articlesManagement();
-        } elseif($_GET['action'] == 'newArticle') {
-            $backendController == new BackendController();
-            $backendController->newArticle();
-        } elseif($_GET['action'] == 'updateArticle') {
-            $backendController == new BackendController();
-            $backendController->updateArticle();
+        } elseif($_GET['action'] == 'verifyLogin') {
+            if (!empty($_POST['pseudo']) && !empty($_POST['password'])) {
+            $frontendController = new FrontendController();
+                if ($frontendController->verifyLogin(htmlspecialchars($_POST['pseudo']), htmlspecialchars($_POST['password']))) {
+                    header('location: index.php?action=articlesManagement');
+                } else {
+                    throw new Exception('Identifiant ou mot de pass invalide');
+                }
+            } else {
+                throw new Exception('Veuiller remplire le formulaire');
+            }
+        } elseif ($_SESSION) {
+            if($_GET['action'] == 'articlesManagement') {
+                $backendController = new Backendcontroller();
+                echo $backendController->articlesManagement();
+            } elseif($_GET['action'] == 'newArticle') {
+                $backendController = new BackendController();
+                $backendController->newArticle();
+            } elseif($_GET['action'] == 'updateArticle') {
+                $backendController = new BackendController();
+                $backendController->updateArticle();
+            } elseif ($_GET['action'] == 'sessionDestroy') {
+				$backendController = new BackendController();
+				$backendController->sessionDestroy();
+				header('location: index.php');
+			} else {
+				throw new Exception('Session expirée ou page introuvable');
+			}
         }
         else {
-            $frontendController = new FrontendController();
-            $frontendController->home();
+            throw new Exception('Session expirée ou page introuvable');
         }
-    }
-    else {
+    } else {
         $frontendController = new FrontendController();
         echo $frontendController->home();
     } 
@@ -106,5 +74,4 @@ try {
 catch(Exception $e) {
     echo 'Erreur: ' .$e->getMessage();
 }
-*/
 ?>

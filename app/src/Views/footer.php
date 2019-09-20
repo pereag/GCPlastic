@@ -6,19 +6,24 @@
                 <span>9 Rue des Rubis,<br> 38280 Villette d'Anthon</span>
             </div>
             <div class="fdiv fdiv-rborder fdiv-3">
-                <img class="fdiv-icon fdiv-icon-mail " src="<?= $this->path; ?>/public/images/envelope.png" alt="Image email">
+                <img class="fdiv-icon fdiv-icon-mail" src="<?= $this->path; ?>/public/images/envelope.png" alt="Image email">
                 <span>Gcplastic@gcplastic.fr</span>
             </div>
             <div class="fdiv fdiv-rborder fdiv-4">
-                <img class="fdiv-icon fdiv-icon-phone " src="<?= $this->path; ?>/public/images/telephone.png" alt="Image Téléphone">
+                <img class="fdiv-icon fdiv-icon-phone" src="<?= $this->path; ?>/public/images/telephone.png" alt="Image Téléphone">
                 <span>04 78 31 18 31</span>
             </div>
             <div class="fdiv fdiv-white fdiv-5">
-            <span><a href="<?= $this->path; ?>/admin">Administration</a></span>
+            <?php 
+            if(!empty($_SESSION) && isset($_SESSION['auth'])) {
+                echo '<span><a href="' .$this->path. '?action=articlesManagement">Tableau de bord</a> | <a href="' .$this->path. '?action=sessionDestroy">Déconnexion</a></span>';
+            } else {
+                echo '<span><a href="' .$this->path. '?action=admin">Administration</a></span>';
+            } ?>
                 <span>Copyright © 2019</span><br>
                 <span>GC Plastic</span><br>
                 <span>Tous droits réservés</span><br>
-                <span><a href="<?= $this->path; ?>/legalNotice">Mentions légales</a></span>
+                <span><a href="<?= $this->path; ?>?action=legalNotice">Mentions légales</a></span>
             </div>
             <div class="fdiv fdiv-6"></div>
         </footer>
@@ -49,5 +54,7 @@
             <script type="text/javascript" src="<?= $this->path ?>/public/js/TitleAnimation.js"></script>
         <?php } ?>
         <script type="text/javascript" src="<?= $this->path ?>/public/js/Loader.js"></script>
+        <script type="text/javascript" src="<?= $this->path ?>/public/js/MobileMenu.js"></script>
+        <div style="background:pink;color:#333;position:fixed;right:0;bottom:0;z-index:99999999;font:1em arial;opacity:.9" id="ld"></div><script>setInterval(function(){if($(window).height()>=$(document).height()){$('#ld').text($(document).width()+' px');}else{$('#ld').text($(document).width()+17+' px');}},150);</script>
     </body>
 </html>

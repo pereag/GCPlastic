@@ -14,31 +14,42 @@
         <a href="<?= $this->path; ?>"><img class="logo" src="<?= $this->path; ?>/public/images/logo.png" alt="Logo GC Plastic"></a>
         <nav class="hnav">
             <div class="hnav-accueil hnav-a">
-                <a href="<?= $this->path ?>/home">
+                <a href="<?= $this->path ?>?action=home">
                     ACCUEIL
                 </a>
             </div>
             
             <div class="hnav-services hnav-a">
-                <a href="<?= $this->path ?>/services">
+                <a href="<?= $this->path ?>?action=services">
                     SERVICES
                 </a>
             </div>
             <div class="hnav-machines hnav-a">
-                <a href="<?= $this->path ?>/park">
+                <a href="<?= $this->path ?>?action=park">
                     PARC MACHINES
                 </a>
             </div>
             <div class="hnav-actualites hnav-a">
-                <a href="<?= $this->path ?>/news">
+                <a href="<?= $this->path ?>?action=news">
                     ACTUALITES
                 </a>
             </div>
             <div class="hnav-contact hnav-a">
-                <a href="<?= $this->path ?>/contact">
+                <a href="<?= $this->path ?>?action=contact">
                     CONTACT
                 </a>
             </div>
         </nav>
+        <img id="header-mobileImg" draggable="false" src="<?= $this->path ?>/public/images/menu.png" alt="menu mobile">
     </header>
     <div class="out-header"></div>
+    <div id="mobileMenu" class="mobileMenu_disable">
+        <ul id ="mobileMenu-buttonGroupe">
+        <a href="<?= $this->path ?>?action=home"><li>ACCUEIL</li></a>
+            <a href="<?= $this->path ?>?action=services"><li>SERVICES</li></a>
+            <a href="<?= $this->path ?>?action=park"><li>PARC MACHINES</li></a>
+            <a href="<?= $this->path ?>?action=news"><li>ACTUALITES</li></a>
+            <a href="<?= $this->path ?>?action=contact"><li>CONTACT</li></a>
+        </ul>
+    </div>
+    <div id="mobileMenu-background" class="mobileMenu-background_disable"></div>

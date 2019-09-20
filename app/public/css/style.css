@@ -148,6 +148,9 @@ textarea {
     padding: 30px;
     margin-bottom: 20px;
 }
+ul {
+     list-style-type: none;
+}
 
 /*--------------------------------------------------------------------------------------------------------------------------
                                                         Header
@@ -181,6 +184,51 @@ header {
     width: 220px;
     height: 80px;
 }
+#mobileMenu {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    right: 0;
+    top: 79px;
+    border-top: #eeeeee solid 1px;
+    background-color: rgb(58, 58, 58);
+    z-index: 10;
+}
+#mobileMenu-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.4;
+    z-index: 1;
+}
+#header-mobileImg {
+    display: none;
+    width: 50px;
+    height: 36px;
+    margin: auto 50px auto 0px;
+    cursor: pointer;
+}
+#mobileMenu li {
+    border-bottom: #525252 solid 1px;
+    padding:22px;
+}
+#mobileMenu li:hover {
+    background-color: #ffc400;
+    color: white;
+}
+.mobileMenu_active, .mobileMenu-background_active {
+    display: block;
+}
+.mobileMenu_disable, .mobileMenu-background_disable {
+    display: none;
+}
+#mobileMenu ul {
+    margin: 0;
+    padding: 0;
+}
 
 
 /*--------------------------------------------------------------------------------------------------------------------------
@@ -193,7 +241,7 @@ header {
     width:100000px;
     height: 472px;
     padding: 0px 100px 0px 100px;
-    background: url('http://localhost:8001/public/images/banner.jpg') no-repeat center center;
+    background: url('http://localhost/GCPlastic/app/public/images/banner.jpg') no-repeat center center;
     background-size: cover;
     text-align: right;
 }
@@ -270,7 +318,7 @@ footer {
     display: table;
     height: 586px;
     width: 100%;
-    background:"http://localhost:8001/public/images/image-1.jpg";
+    background:"http://localhost/GCPlastic/app/public/images/image-1.jpg";
 }
 .slideshow-content {
     display: flex;
@@ -594,4 +642,15 @@ footer {
 }
 .updateArticle-imageForm {
     margin: auto auto 30px auto;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------
+                                                        Responsive design 
+------------------------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1100px) {
+    .hnav {display: none;}
+        #header-mobileImg {
+            display: flex;
+        }
 }

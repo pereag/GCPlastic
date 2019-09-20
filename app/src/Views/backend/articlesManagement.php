@@ -23,12 +23,12 @@
                 <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore non eius nobis neque nisi blanditiis ...</td>
                 <td><img src="" alt="Image de l'article"></td>
                 <td>Le 20/12/19 à 8h30</td>
-                <th><a href="<?= $this->path ?>/updateArticle">modifier</a></th>
-                <th><a href="<?= $this->path ?>/deleteArticle">supprimer</a></th>
+                <th><a href="<?= $this->path ?>?action=updateArticle">modifier</a></th>
+                <th><a href="<?= $this->path ?>?action=deleteArticle">supprimer</a></th>
             </tr>
         </tfoot>
     </table>
-            <a href="<?= $this->path ?>/newArticle"><button class="btn-yellow btn-large">CREE UN NOUVEL ARTICLE</button></a>
+            <a href="<?= $this->path ?>?action=newArticle"><button class="btn-yellow btn-large">CREE UN NOUVEL ARTICLE</button></a>
         </section>
     </div>
    

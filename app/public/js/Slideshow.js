@@ -34,11 +34,11 @@ class Slideshow {
 // Change le background du diaporama à chaque changement de diapo
     changeImage() {
         if(this.mobileVersion == false) {
-            this.id.style.background = 'url(http://localhost:8001/public/images/image-'+ this.image + '.jpg) no-repeat center center';
+            this.id.style.background = 'url(http://localhost/GCPlastic/app/public/images/image-'+ this.image + '.jpg) no-repeat center center';
             this.id.style.backgroundSize = '100%';
         }
         else if(this.mobileVersion == true) {
-            this.id.style.background = 'url(http://localhost:8001/public/images/image-'+ this.image + '-mobile.jpg) no-repeat center center';
+            this.id.style.background = 'url(http://localhost/GCPlastic/app/public/images/image-'+ this.image + '-mobile.jpg) no-repeat center center';
             this.id.style.backgroundSize = '100%';
         };
     };

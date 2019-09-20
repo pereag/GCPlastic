@@ -29,4 +29,8 @@ class BackendController {
         $path = $this->path;
 
     }
+    public function sessionDestroy()
+	{
+		session_destroy();
+	}
 }

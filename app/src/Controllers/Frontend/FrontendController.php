@@ -1,6 +1,9 @@
 <?php
 
 namespace Src\Controllers\Frontend;
+use Src\Models\MembersManager;
+use Src\Models\PostsManager;
+use \Exception;
 
 
 class FrontendController {
@@ -10,6 +13,8 @@ class FrontendController {
     }
     public function home() 
     {
+        $postsManager = new PostsManager();
+        $postsManager->getPost(1);
         $slideshowScript = true;
         require_once "./src/Views/frontend/home.php";
         $path = $this->path;
@@ -32,6 +37,8 @@ class FrontendController {
     }
     public function news()
     {
+        $postsManager = new PostsManager();
+        $postsManager->getPosts();
         $titleAnimationScript = true;
         $pagingScript = true;
         require_once "./src/Views/frontend/news.php";
@@ -41,7 +48,9 @@ class FrontendController {
     public function new($id)
     {
         $titleAnimationScript = true;
-        require_once "./src/Views/frontend/newphp";
+        $postsManager = new postsManager();
+        $postsManager->getPost($id);
+        require_once "./src/Views/frontend/new.php";
         $path = $this->path;
 
     }
@@ -59,4 +68,9 @@ class FrontendController {
         $path = $this->path;
 
     }
+    public function verifyLogin($pseudo, $password)
+	{
+		$membersManager = new MembersManager();
+		return $membersManager->getlogin($pseudo, $password);
+	}
 }

@@ -7,9 +7,9 @@
 
 <div class="container">
     <section class="admin-connection">
-        <form class="form" action="<?php $this->path ?>articlesManagement" method="$_GET">
-            <input type="text" name="pseudo" placeholder="PSEUDO" required>
-            <input type="password" name="password" placeholder="MOT DE PASSE" required>
+        <form class="form" action="<?php $this->path ?>?action=verifyLogin" method="post">
+            <input type="text" name="pseudo" placeholder="PSEUDO" >
+            <input type="password" name="password" placeholder="MOT DE PASSE" >
             <button type="submit" class="btn-yellow btn-medium">CONNECTION</button>
         </form>
     </section>
