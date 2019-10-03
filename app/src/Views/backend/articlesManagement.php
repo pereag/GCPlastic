@@ -6,14 +6,13 @@
 ?>  
     <div class="container">
         <section class="articlesManager">
-        <table id="tableArticles" class="display" style="width:100%">
+        <table id="tableArticles" class="display responsive nowrap" style="width:100%">
         <thead>
             <tr>
                 <th>Titre</th>
                 <th>Extrait</th>
                 <th>Image</th>
                 <th>Date et heure</th>
-                <th></th>
                 <th></th>
             </tr>
         </thead>
@@ -23,10 +22,9 @@
                 <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore non eius nobis neque nisi blanditiis ...</td>
                 <td><img src="" alt="Image de l'article"></td>
                 <td>Le 20/12/19 à 8h30</td>
-                <th><a href="<?= $this->path ?>?action=updateArticle">modifier</a></th>
-                <th><a href="<?= $this->path ?>?action=deleteArticle">supprimer</a></th>
+                <th><a href="<?= $this->path ?>?action=updateArticle">modifier</a><br><a href="<?= $this->path ?>?action=deleteArticle">supprimer</a></th>
             </tr>
-        </tfoot>
+        </tbody>
     </table>
             <a href="<?= $this->path ?>?action=newArticle"><button class="btn-yellow btn-large">CREE UN NOUVEL ARTICLE</button></a>
         </section>

@@ -32,7 +32,8 @@ class ArticlesManagement {
                                 0: "Aucune ligne séléctionnée",
                                 1: "1 ligne séléctionnée"
                             } 
-                    }
+                    },
+                    responsive: true
                 }
             });
         } ); 

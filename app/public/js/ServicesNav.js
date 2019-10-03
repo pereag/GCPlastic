@@ -51,6 +51,6 @@ let servicesNav = new ServicesNav(document.getElementById("services-nav"), docum
                              document.getElementById("machining"), document.getElementById("prototype"),
                              document.getElementById("tools-content"), document.getElementById("maintenance-content"),
                              document.getElementById("machining-content"), document.getElementById("prototype-content"),
-                             $(".snav-title"));
+                             $("#prototype h3"));
 
 servicesNav.play();

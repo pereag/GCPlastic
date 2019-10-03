@@ -22,6 +22,7 @@ h2 {
 p{
     color: #424242;
     font-size: 22px;
+    text-align: justify;
 }
 .hr-yellow {
     background-color: #FFE814;
@@ -106,6 +107,9 @@ textarea {
 }
 textarea {
     height: 250px;
+}
+.new {
+    margin: auto 13% auto 13%;
 }
 .btn-news {
     margin-left: 20px;
@@ -206,8 +210,8 @@ header {
 }
 #header-mobileImg {
     display: none;
-    width: 50px;
-    height: 36px;
+    width: 40px;
+    height: 30px;
     margin: auto 50px auto 0px;
     cursor: pointer;
 }
@@ -240,13 +244,14 @@ header {
     vertical-align: middle;
     width:100000px;
     height: 472px;
-    padding: 0px 100px 0px 100px;
+    padding: 0px 5% 0px 5%;
     background: url('http://localhost/GCPlastic/app/public/images/banner.jpg') no-repeat center center;
     background-size: cover;
     text-align: right;
 }
 
 .banner p {
+    text-align: right;
     display: inline-block;
     right:0;
     width: 50%;
@@ -318,7 +323,8 @@ footer {
     display: table;
     height: 586px;
     width: 100%;
-    background:"http://localhost/GCPlastic/app/public/images/image-1.jpg";
+    background: url("http://localhost/GCPlastic/app/public/images/image-1.jpg");
+    border-bottom: 15px solid#ffe814;
 }
 .slideshow-content {
     display: flex;
@@ -330,13 +336,12 @@ footer {
     height: 851px;
 }
 .pimg-tools {
-    width: 921px;
+    width: 48%;
+    background: url("http://localhost/GCPlastic/app/public/images/tool.jpg") right;
 }
 .p-text {
-    padding: 50px;
-}
-.p-text {
-    width: 800px;
+    padding: 40px;
+    width: 52%;
 }
 .last-new {
     text-align: center;
@@ -347,9 +352,9 @@ footer {
     flex-direction: column;
     justify-content: flex-end;
     height: 540px;
-    width: 1300px;
+    width: auto;
     background: #838383;
-    margin: 40px auto 30px auto;
+    margin: 40px 12% 30px 12%;
 }
 .lnew-content-txt, .news-content-txt  {
     height: 185px;
@@ -508,6 +513,9 @@ footer {
 .new {
     text-align: center;
 }
+#new-txt-title{
+    font-size: 24px;
+}
 .new-arrow-left .new-arrow-right .new-image {
     width: 40px;
     height: 65px;
@@ -521,18 +529,16 @@ footer {
     opacity: 1;
 }
 .new-image {
-    width:1200px;
+    width: 100%;
     height: 500px;
     background-color: grey;
-    margin: 30px 0px 30px 0px;
+    margin: 30px auto 30px auto;
 }
 .new-image-groupe {
-    width: 1400px;
     margin: auto;
 }
 .new-txt {
-    width: 1100px;
-    margin: 0px auto 20px auto;
+    margin-bottom: 20px;
     padding: 30px 50px 50px 50px;
     background-color: #2D2B2B;
     color: white;
@@ -598,18 +604,19 @@ footer {
     display: block;
 }
 .sdescription-content {
-    width:1200px;
+    max-width:1200px;
     margin: 70px auto 50px auto; 
     text-align: center;
 }
 .sdescription-content-txt {
-    text-align: left;
+    text-align: justify;
+    padding: 30px;
 }
 .services-img {
     background: #c4c4c4;
-    width:580px;
+    width: 530px;
     height: 300px;
-    margin: 30px 0px 30px 0px;
+    margin: 30px auto 30px auto;
 }
 .sdescription-content-txt {
     margin-top: 30px;
@@ -647,10 +654,146 @@ footer {
 /*------------------------------------------------------------------------------------------------------------------------------
                                                         Responsive design 
 ------------------------------------------------------------------------------------------------------------------------------*/
-
+@media screen and (max-width: 1550px) {
+    #nav-left-img, #nav-right-img {
+        display: none;
+    }
+    #park-milling, #park-tower, #park-erosion, #park-injection, #park-grinding {
+        max-width: 1000px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
 @media screen and (max-width: 1100px) {
     .hnav {display: none;}
         #header-mobileImg {
             display: flex;
         }
+        .fdiv-1 {
+            display: none;
+        }
+        .fdiv-6 {
+            display: none;
+        }
+        .images-groupe { 
+            flex-direction: column;
+        }
+}
+@media screen and (max-width: 885px) {
+    .banner {
+        padding: 0px 20% 0px 20%; 
+    }
+    .banner p {
+        width: auto;
+        min-width: auto;
+        text-align: justify;
+    }
+    #banner-title {
+        font-size: 26px;
+    }
+    #pbtn-arrow-left, #pbtn-arrow-right {
+        width: 50%;
+        height: 50%;
+    }
+    #park-p {
+        font-size: 20px;
+    }
+    .park-nav {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #nav-center-img {
+        width: 250px;
+        height: 125px;
+    }
+    #park-list {
+        flex-direction: column;
+        padding: 4%;
+    }
+    .park-list-left, .park-list-center {
+        margin: 5% auto 5% auto;
+    } 
+    .btn-large {
+        font-size: 15px;
+        padding: 1.2rem;
+        width: 200px;
+    }
+    .btn-medium {
+        font-size: 13px;
+        padding: 1rem;
+        width: 150px;
+    }
+    .new {
+        margin: 0px 5% 0px 5%;
+    }
+    #new-txt-p {
+        font-size: 18px;
+    }
+    #new-txt-title{
+        font-size: 20px;
+    }
+    .form {
+        width: 85%;
+    }
+    .pimg-tools {
+        display:none;
+    }
+    .p-text {
+        width :100%;
+    }
+    .p-text p {
+        text-align: justify;
+    }
+
+    .presentation {
+        height: auto;
+    }
+    input[type=text], input[type=email], input[type=password], textarea, p {
+        font-size : 20px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    #lnew-content, .news-content {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer {
+        flex-direction: column;
+    }
+    .fdiv {
+        width: auto;
+    }
+    .fdiv-2, .fdiv-3, .fdiv-4 {
+    background-color: black
+    }
+    .fdiv-4, .fdiv-5 {
+        padding-bottom: 50px;
+    }
+    #services-nav {
+        flex-direction: column;
+    }
+    .services-nav-block {
+        margin: 10px auto 10px auto;
+        width: 70%;
+    }
+    .services-img {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 645px) {
+    #sarrow-left, #sarrow-right {
+        width: 20px;
+        height : 33px;
+    }
+    #splay { 
+        width: 32px;
+        height: 32px;
+    }
+    #spause {
+        width: 20px;
+        height: 31px;
+    }
+
 }

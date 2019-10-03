@@ -39,6 +39,7 @@
         <?php } if(isset($datatableScript) && $datatableScript) { 
             ?>
             <script type="text/javascript" src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+            <script type="text/javascript" src="//cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
             <script type="text/javascript" src="<?= $this->path; ?>/public/js/ArticlesManagement.js"></script>       
         <?php } if(isset($slideshowScript) && $slideshowScript) {
             ?>

@@ -7,13 +7,7 @@
 <div class="container">
     <section class="new">
         <div class="images-groupe new-image-groupe">
-            <div class="vertical-align">
-                <img class="new-arrow-left" src="<?= $this->path; ?>/public/images/arrow-left.png" alt="Fleche de gauche">
-            </div>
             <img class="new-image" src="" alt="Photo de l'articles">
-            <div class="vertical-align">
-                <img class="new-arrow-right" src="<?= $this->path; ?>/public/images/arrow-right.png" alt="Fleche de droite">
-            </div>
         </div>
         <div class="new-txt">
             <h3 id="new-txt-title">TITLE</h3>
