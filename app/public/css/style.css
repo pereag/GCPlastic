@@ -626,8 +626,10 @@ footer {
 ----------------------------------------------------------------------------------------------------------------------------*/
 .articlesManager{ 
     margin: auto;
-   text-align:center;
    width: 80%;
+}
+.button-div {
+    text-align: center;
 }
 .articlesManager a {
     color: #f5d51d;
