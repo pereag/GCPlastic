@@ -31,6 +31,15 @@ try {
         } elseif($_GET['action'] == 'contact') {
             $frontendController = new FrontendController();
             echo $frontendController->contact();
+        } elseif($_GET['action'] == 'sendEmail') {
+            if (!empty($_POST['lastname']) && !empty($_POST['firstname']) && !empty($_POST['email']) && !empty($_POST['message']))
+            {
+                $frontendController = new FrontendController();
+                $frontendController->sendEmail( htmlspecialchars($_POST['lastname']), htmlspecialchars($_POST['firstname']),
+                htmlspecialchars($_POST['email']), htmlspecialchars($_POST['society']), htmlspecialchars($_POST['message']));
+            } else {
+                throw new Exception('Valeurs vides');
+            }
         } elseif($_GET['action'] == 'admin') {
             $frontendController = new FrontendController();
             echo $frontendController->admin();

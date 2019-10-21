@@ -3,6 +3,7 @@
 namespace Src\Controllers\Frontend;
 use Src\Models\MembersManager;
 use Src\Models\PostsManager;
+use Src\Models\Mail;
 use \Exception;
 
 
@@ -57,6 +58,7 @@ class FrontendController {
     public function contact()
     {
         $titleAnimationScript = true;
+        $contactScript = true;
         require_once "./src/Views/frontend/contact.php";
         $path = $this->path;
 
@@ -72,5 +74,10 @@ class FrontendController {
 	{
 		$membersManager = new MembersManager();
 		return $membersManager->getlogin($pseudo, $password);
-	}
+    }
+    public function sendEmail($lastName, $firstName, $email, $society, $message)
+    {
+        $mail = new Mail();
+        $mail->sendEmail($lastName, $firstName, $email, $society, $message);
+    }
 }

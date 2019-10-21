@@ -51,8 +51,12 @@
             ?>
             <script type="text/javascript" src="<?= $this->path ?>/public/js/Page.js"></script>
             <script type="text/javascript" src="<?= $this->path ?>/public/js/Paging.js"></script>
-        <?php } if(isset($titleAnimationScript) && $titleAnimationScript) {?>
+        <?php } if(isset($titleAnimationScript) && $titleAnimationScript) { 
+            ?>
             <script type="text/javascript" src="<?= $this->path ?>/public/js/TitleAnimation.js"></script>
+        <?php }  if(isset($contactScript) && $contactScript) { 
+            ?>
+            <script type="text/javascript" src="<?= $this->path ?>/public/js/Contact.js"></script>
         <?php } ?>
         <script type="text/javascript" src="<?= $this->path ?>/public/js/Loader.js"></script>
         <script type="text/javascript" src="<?= $this->path ?>/public/js/MobileMenu.js"></script>

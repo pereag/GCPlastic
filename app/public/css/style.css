@@ -324,7 +324,7 @@ footer {
     height: 586px;
     width: 100%;
     background: url("http://localhost/GCPlastic/app/public/images/image-1.jpg");
-    border-bottom: 15px solid#ffe814;
+    border-bottom: 16px solid#ffe814;
 }
 .slideshow-content {
     display: flex;
@@ -554,6 +554,10 @@ footer {
 ----------------------------------------------------------------------------------------------------------------------------*/
 .contact-mail {
     color: #ffc400;
+}
+.buttonContact-content {
+    margin: auto;
+    text-align: center;
 }
 /*--------------------------------------------------------------------------------------------------------------------------
                                                         Services
