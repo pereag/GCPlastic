@@ -26,7 +26,7 @@ try {
                 echo $frontendController->new($_GET['id']);
             }
             else {
-                throw new Exception('Article invalide ou inexistant.');
+                throw new Exception('Article invalide ou inexistant');
             }
         } elseif($_GET['action'] == 'contact') {
             $frontendController = new FrontendController();
@@ -38,7 +38,7 @@ try {
                 $frontendController->sendEmail( htmlspecialchars($_POST['lastname']), htmlspecialchars($_POST['firstname']),
                 htmlspecialchars($_POST['email']), htmlspecialchars($_POST['society']), htmlspecialchars($_POST['message']));
             } else {
-                throw new Exception('Valeurs vides');
+                throw new Exception('Champs invalides');
             }
         } elseif($_GET['action'] == 'admin') {
             $frontendController = new FrontendController();
@@ -49,7 +49,7 @@ try {
                 if ($frontendController->verifyLogin(htmlspecialchars($_POST['pseudo']), htmlspecialchars($_POST['password']))) {
                     header('location: index.php?action=articlesManagement');
                 } else {
-                    throw new Exception('Identifiant ou mot de pass invalide');
+                    throw new Exception('Identifiant ou mot de passe invalide');
                 }
             } else {
                 throw new Exception('Veuiller remplire le formulaire');
@@ -81,6 +81,7 @@ try {
     } 
 }
 catch(Exception $e) {
-    echo 'Erreur: ' .$e->getMessage();
+    $frontendController = new FrontendController();
+    echo $frontendController->displayError($e);
 }
 ?>

@@ -80,4 +80,7 @@ class FrontendController {
         $mail = new Mail();
         $mail->sendEmail($lastName, $firstName, $email, $society, $message);
     }
+    public function displayError($error) {
+        require_once "./src/Views/frontend/error.php";
+    }
 }
