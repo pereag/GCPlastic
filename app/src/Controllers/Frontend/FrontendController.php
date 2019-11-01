@@ -15,7 +15,7 @@ class FrontendController {
     public function home() 
     {
         $postsManager = new PostsManager();
-        $postsManager->getPost(1);
+        $post = $postsManager->getLastPost();
         $slideshowScript = true;
         require_once "./src/Views/frontend/home.php";
         $path = $this->path;
@@ -50,7 +50,7 @@ class FrontendController {
     {
         $titleAnimationScript = true;
         $postsManager = new postsManager();
-        $postsManager->getPost($id);
+        $post = $postsManager->getPost($id);
         require_once "./src/Views/frontend/new.php";
         $path = $this->path;
 

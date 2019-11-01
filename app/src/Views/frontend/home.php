@@ -34,15 +34,16 @@
     <div class="container">
         <h2>DERNIERE ACTUALITE</h2>
         <hr class="hr-yellow hr-center">
-        <div id="lnew-content">
+        <div id="lnew-content" style="background-image: url('<?= $this->path; ?>/public/images/<?= $post->getImagePost() ?>')">
+        <a href="<?= $this->path ?>?action=new&id=<?= $post->getId() ?>">
             <div class="lnew-content-txt">
-                <h3 id="lnc-txt-title">TITRE</h3>
+                <h3 id="lnc-txt-title"><?= $post->getTitle() ?></h3>
                 <p id="lnc-txt-p">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Odit ...
+                <?= $post->getContent() ?> ...
                 </p>
-                <span id="lnc-txt-date">20/15/2020 à 18h00</span>
+                <span id="lnc-txt-date">Le <?= $post->getDatePost() ?></span>
             </div>
+            </a>
         </div>
     </div>
 </section>

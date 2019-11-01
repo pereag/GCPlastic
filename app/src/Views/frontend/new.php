@@ -7,18 +7,18 @@
 <div class="container">
     <section class="new">
         <div class="images-groupe new-image-groupe">
-            <img class="new-image" src="" alt="Photo de l'articles">
+            <img class="new-image" src="" alt="Photo de l'articles" style="background-image: url('<?= $this->path; ?>/public/images/<?= $post->getImagePost() ?>')">
         </div>
         <div class="new-txt">
-            <h3 id="new-txt-title">TITLE</h3>
+            <h3 id="new-txt-title"><?= $post->getTitle() ?></h3>
             <p id="new-txt-p">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, pariatur distinctio
-                beatae sed impedit voluptatum repellendus dignissimos incidunt sequi doloremque
-                exercitationem blanditiis iusto qui assumenda consequuntur reiciendis consectetur quasi totam.
+            <?= $post->getContent() ?>
             </p>
-            <span>Date et heurs</span>
+            <span><?= $post->getdatePost() ?></span>
         </div>
-        <button class="btn-yellow btn-large">LISTES DES ACTUALITES</button>
+        <a href="<?= $this->path ?>?action=news">
+            <button class="btn-yellow btn-large">LISTES DES ACTUALITES</button>
+        </a>
     </section>
 </div>
 

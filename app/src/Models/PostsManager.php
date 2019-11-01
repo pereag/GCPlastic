@@ -24,20 +24,20 @@ class postsManager extends Manager
 
     public function getPost($id)
     {
-        $req = $this->db->prepare('SELECT id, title, content, DATE_FORMAT(datePost, \'%d/%m/%Y\') AS datePost FROM posts WHERE id = ?');
-        $post = $req->execute(array($id));
-        return $post;
+        $req = $this->db->prepare('SELECT id, title, imagePost, content, DATE_FORMAT(datePost, \'%d/%m/%Y\') AS datePost FROM posts WHERE id = ?');
+        $req->execute(array($id));
+        return new Post($req->fetch(PDO::FETCH_ASSOC));
     }
 
     public function getLastPost()
     {
-        $req = $this->db->query('SELECT id, title, SUBSTRING(content,1,350) AS content, DATE_FORMAT(datePost, \'%d/%m/%Y\') AS datePost FROM posts WHERE id = (SELECT MAX(id))');
+        $req = $this->db->query('SELECT id, title, imagePost, SUBSTRING(content,1,85) AS content, DATE_FORMAT(datePost, \'%d/%m/%Y\') AS datePost FROM posts ORDER BY id DESC LIMIT 0,1');
         return new Post($req->fetch(PDO::FETCH_ASSOC));
     }
     
     public function getPostsAdmin()
     {
-        $req = $this->db->query('SELECT id, title, SUBSTRING(content,1,116) AS content, DATE_FORMAT(datePost, \'%d/%m/%Y\') AS datePost FROM posts ORDER BY datePost DESC');
+        $req = $this->db->query('SELECT id, title, SUBSTRING(content,1,85) AS content, DATE_FORMAT(datePost, \'%d/%m/%Y\') AS datePost FROM posts ORDER BY datePost DESC');
          $aResp = $req->fetchAll(PDO::FETCH_ASSOC);
          
         if (!$aResp) {

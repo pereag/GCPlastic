@@ -10,10 +10,6 @@ class Paging {
     }
 
     play() {
-    // On verifie si le nombre d'articles ne dépace pas la limite
-        if (this.articleNew.length > this.limiteArticles){
-        // On affiche la pagination
-            this.displayPaging();
             let a = this.articleNew.length / this.limiteArticles;
         // On calcule le nombre de page maximum
             this.pageNbr = Math.ceil(a);
@@ -21,7 +17,6 @@ class Paging {
             for ( let i = 1; i < this.pageNbr + 1; i++) {
                new Page(i, this.limiteArticles, this.articleNew, this.page, this.btnPrevious, this.btnNext).play();
             }
-        }
     // on ecoute le click des boutons 
         this.btnPrevious.click(() => {
             this.btnPreviousClick();
@@ -33,11 +28,10 @@ class Paging {
             let event = new Event("pageChange", {bubbles: true}); 
             document.dispatchEvent(event); 
         });
-    }
-
-//Affiche les boutons
-    displayPaging() {
-        this.pagingId.addClass("paging__active");
+    // On verifie si le nombre d'articles ne dépace pas la limite
+        if (this.articleNew.length <= this.limiteArticles){
+            this.btnNext.addClass("btn__desable"); 
+        }
     }
 
 // Allé jusqu'à l'ancre

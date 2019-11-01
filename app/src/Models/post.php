@@ -5,6 +5,7 @@ class Post
 	protected $error = [];
 	protected $id;
 	protected $title;
+	protected $imagePost;
 	protected $content;
 	protected $datePost;
 	const TITRE_INVALIDE = 1; 
@@ -49,6 +50,10 @@ class Post
 	{
 		$this->datePost = $datePost;
 	}
+	public function setImagePost($imagePost)
+	{
+		$this->imagePost = (string) $imagePost;
+	}
 /*-----getters-----*/
 	public function getError()
 	{
@@ -69,5 +74,9 @@ class Post
 	public function getDatePost()
 	{
 		return $this->datePost;
+	}
+	public function getImagePost()
+	{
+		return $this->imagePost;
 	}
 }
