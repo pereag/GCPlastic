@@ -23,7 +23,7 @@ try {
         } elseif($_GET['action'] == 'new') {
             if(isset($_GET['id']) && $_GET['id'] > 0 ) {
                 $frontendController = new FrontendController();
-                echo $frontendController->new($_GET['id']);
+                echo $frontendController->new(htmlspecialchars($_GET['id']));
             }
             else {
                 throw new Exception('Article invalide ou inexistant');
@@ -61,10 +61,43 @@ try {
             } elseif($_GET['action'] == 'newArticle') {
                 $backendController = new BackendController();
                 $backendController->newArticle();
-            } elseif($_GET['action'] == 'updateArticle') {
+            } elseif($_GET['action'] == 'addPost') {
+                if (!empty($_POST['title']) && !empty($_POST['content'])) {
                 $backendController = new BackendController();
-                $backendController->updateArticle();
-            } elseif ($_GET['action'] == 'sessionDestroy') {
+                        $backendController->addPost(htmlspecialchars($_POST['title']), htmlspecialchars($_POST['content']));
+                        header('location: index.php?action=articlesManagement');
+                } else {
+                    throw new Exception('Les champs ne sont pas remplies');
+                }
+            } elseif($_GET['action'] == 'updateArticle') {
+                if(isset($_GET['id']) && $_GET['id'] > 0 ) {
+                    $backendController = new BackendController();
+                    $backendController->updateArticle(htmlspecialchars($_GET['id']));
+                }
+                else {
+                    throw new Exception('Article invalide ou inexistant');
+                }
+            } elseif ($_GET['action'] == 'deletePostAdmin') {
+                if (isset($_GET['id']) && $_GET['id'] > 0) {
+                    $backendController = new backendController();
+                    $backendController->deletePostAdmin(htmlspecialchars($_GET['id']));
+                    header('location: index.php?action=articlesManagement');
+                } else {
+                    throw new Exception('L\'id n\'est pas valide');
+                } 
+            } elseif ($_GET['action'] == 'sendModifPost') {
+				if (isset($_GET['id']) && $_GET['id'] > 0) {
+					if (!empty($_POST['title']) && !empty($_POST['content'])) {
+						$backendController = new BackendController();
+						$backendController->sendModifPost(htmlspecialchars($_POST['title']), htmlspecialchars($_POST['content']), htmlspecialchars($_GET['id']));
+						header('location: index.php?action=articlesManagement');
+					} else {
+						throw new Exception('Les champs n\'ons pas étais remplis');
+					}
+				} else {
+					throw new Exception('L\'id du billet est invalide');
+				}
+			} elseif ($_GET['action'] == 'sessionDestroy') {
 				$backendController = new BackendController();
 				$backendController->sessionDestroy();
 				header('location: index.php');

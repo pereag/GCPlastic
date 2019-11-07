@@ -7,7 +7,7 @@
 
 <div class="container">
     <section class="admin-connection">
-        <form class="form" action="<?php $this->path ?>?action=verifyLogin" method="post">
+        <form class="form" action="?action=verifyLogin" method="post">
             <input type="text" name="pseudo" placeholder="PSEUDO" required>
             <input type="password" name="password" placeholder="MOT DE PASSE" required>
             <button type="submit" class="btn-yellow btn-medium">CONNECTION</button>

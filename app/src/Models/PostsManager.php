@@ -10,7 +10,7 @@ class postsManager extends Manager
 {
     public function getPosts()
     {
-        $req = $this->db->query('SELECT id, title, SUBSTRING(content,1,350) AS content, DATE_FORMAT(datePost, \'%d/%m/%Y\') AS datePost FROM posts ORDER BY datePost DESC');
+        $req = $this->db->query('SELECT id, title, imagePost, SUBSTRING(content,1,85) AS content, DATE_FORMAT(datePost, \'%d/%m/%Y\') AS datePost FROM posts ORDER BY datePost DESC');
         $aResp = $req->fetchAll(PDO::FETCH_ASSOC);
         if (!$aResp) {
             $obj = [];
@@ -37,7 +37,7 @@ class postsManager extends Manager
     
     public function getPostsAdmin()
     {
-        $req = $this->db->query('SELECT id, title, SUBSTRING(content,1,85) AS content, DATE_FORMAT(datePost, \'%d/%m/%Y\') AS datePost FROM posts ORDER BY datePost DESC');
+        $req = $this->db->query('SELECT id, title, imagePost, SUBSTRING(content,1,85) AS content, DATE_FORMAT(datePost, \'%d/%m/%Y\') AS datePost FROM posts ORDER BY datePost DESC');
          $aResp = $req->fetchAll(PDO::FETCH_ASSOC);
          
         if (!$aResp) {
@@ -68,7 +68,7 @@ class postsManager extends Manager
         $req->execute(array($id));
         return new Post($req->fetch(PDO::FETCH_ASSOC));
     }
-    public function sendArticleAdmin($title, $content, $id)
+    public function sendmodifPost($title, $content, $id)
     {
         $comments = $this->db->prepare('UPDATE posts SET title = ?, content = ?  WHERE id = ?');
         $returnArticle = $comments->execute(array($title, $content, $id));

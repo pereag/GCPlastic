@@ -11,7 +11,6 @@
                 <tr>
                     <th>Titre</th>
                     <th>Extrait</th>
-                    <th>Image</th>
                     <th>Date et heure</th>
                     <th></th>
                 </tr>
@@ -20,9 +19,8 @@
                 <tr>
                     <td>Titre</td>
                     <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore non eius nobis neque nisi blanditiis ...</td>
-                    <td><img src="" alt="Image de l'article"></td>
                     <td>Le 20/12/19 à 8h30</td>
-                    <th><a href="<?= $this->path ?>?action=updateArticle">modifier</a> | <a href="<?= $this->path ?>?action=deleteArticle">supprimer</a></th>
+                    <th><a href="<?= $this->path ?>?action=updateArticle&id=14">modifier</a> | <a href="<?= $this->path ?>?action=deletePostAdmin&id=7">supprimer</a></th>
                 </tr>
             </tbody>
         </table>

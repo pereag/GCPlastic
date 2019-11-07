@@ -6,13 +6,13 @@
 ?>
     <div class="container">
     <section class="updateArticle">
-        <form class="form" action="" methode="">
-            <input type="text" placeholder="TITRE DE L'ARTICLE" required>
-            <textarea placeholder="CONTENU" required></textarea>
-                <img class="updateArticle-image"src="" alt="Image de l'article">
+        <form class="form" action="?action=sendModifPost&amp;id=<?= $post->getid() ?>" method="post">
+            <input type="text" placeholder="TITRE DE L'ARTICLE" name="title" value="<?= $post->getTitle() ?>" required>
+            <textarea placeholder="CONTENU" name="content" required><?= $post->getContent() ?></textarea>
+                <img class="updateArticle-image"src="<?= $this->path; ?>/public/images/<?= $post->getImagePost() ?>" alt="Image de l'article">
                 <div class="updateArticle-imageForm">
                     <label for="image">Changer votre image</label><br>
-                    <input type="file" name="image" placeholder="TITRE DE L'ARTICLE" required>
+                    <input type="file">
                 </div>
             <button class="btn-yellow btn-medium" type="submit">PUBLIER</button>
         </form>

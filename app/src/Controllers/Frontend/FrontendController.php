@@ -39,7 +39,7 @@ class FrontendController {
     public function news()
     {
         $postsManager = new PostsManager();
-        $postsManager->getPosts();
+        $post = $postsManager->getPosts();
         $titleAnimationScript = true;
         $pagingScript = true;
         require_once "./src/Views/frontend/news.php";
