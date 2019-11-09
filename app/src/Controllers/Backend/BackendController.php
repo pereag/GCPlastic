@@ -11,6 +11,8 @@ class BackendController {
     }
     public function articlesManagement() 
     {
+        $postsManager = new PostsManager();
+        $post = $postsManager->getPosts();
         $titleAnimationScript = true;
         $datatableScript = true;
         require_once "./src/Views/backend/articlesManagement.php";

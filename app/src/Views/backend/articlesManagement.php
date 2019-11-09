@@ -16,12 +16,18 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Titre</td>
-                    <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore non eius nobis neque nisi blanditiis ...</td>
-                    <td>Le 20/12/19 à 8h30</td>
-                    <th><a href="<?= $this->path ?>?action=updateArticle&id=14">modifier</a> | <a href="<?= $this->path ?>?action=deletePostAdmin&id=7">supprimer</a></th>
-                </tr>
+                <?php
+                    for ($i = 0; $i < count($post); $i = $i + 1) {
+                ?>
+                    <tr>
+                        <td><?= $post[$i]->getTitle() ?></td>
+                        <td><?= $post[$i]->getContent() ?> ...</td>
+                        <td><?= $post[$i]->getdatePost() ?></td>
+                        <th><a href="<?= $this->path ?>?action=updateArticle&id=<?= $post[$i]->getId() ?>">modifier</a> | <a href="<?= $this->path ?>?action=deletePostAdmin&id=<?= $post[$i]->getId() ?>">supprimer</a></th>
+                    </tr>
+                <?php
+                    }
+                ?>
             </tbody>
         </table>
         <div class="button-div">

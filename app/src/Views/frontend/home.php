@@ -37,7 +37,7 @@
         <div id="lnew-content" style="background-image: url('<?= $this->path; ?>/public/images/<?= $post->getImagePost() ?>')">
         <a href="<?= $this->path ?>?action=new&id=<?= $post->getId() ?>">
             <div class="lnew-content-txt">
-                <h3 id="lnc-txt-title"><?= $post->getTitle() ?></h3>
+                <h3 id="lnc-txt-title"><?= strtoupper($post->getTitle()) ?></h3>
                 <p id="lnc-txt-p">
                 <?= $post->getContent() ?> ...
                 </p>

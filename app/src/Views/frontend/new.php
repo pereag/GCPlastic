@@ -10,7 +10,7 @@
             <img class="new-image" src="" alt="Photo de l'articles" style="background-image: url('<?= $this->path; ?>/public/images/<?= $post->getImagePost() ?>')">
         </div>
         <div class="new-txt">
-            <h3 id="new-txt-title"><?= $post->getTitle() ?></h3>
+            <h3 id="new-txt-title"><?= strtoupper($post->getTitle()) ?></h3>
             <p id="new-txt-p">
             <?= $post->getContent() ?>
             </p>

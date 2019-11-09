@@ -18,6 +18,7 @@ class postsManager extends Manager
             foreach ($aResp as $post) {
                 $obj[] = new Post($post);
             }
+            
         }
         return $obj; 
     }
