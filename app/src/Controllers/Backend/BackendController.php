@@ -33,10 +33,10 @@ class BackendController {
         require_once "./src/Views/backend/updateArticle.php";
         $path = $this->path;
     }
-    public function sendModifPost($id, $title, $content) 
+    public function sendModifPost($title, $content, $imagePost, $id) 
     {
             $postsManager = new postsManager();
-            $removePost = $postsManager->sendModifPost($id, $title, $content);
+            $removePost = $postsManager->sendModifPost($title, $content, $imagePost, $id);
             $path = $this->path;
     }
     public function deletePostAdmin($id)
@@ -44,10 +44,10 @@ class BackendController {
 		$postsManager = new postsManager();
 		$removePost = $postsManager->deletePostAdmin($id);
     }
-    public function addPost($title, $content)
+    public function addPost($title, $content, $imagePost)
 	{
 	    $postsManager = new postsManager();
-		$newPost = $postsManager->createPostAdmin($title, $content);
+		$newPost = $postsManager->createPostAdmin($title, $content, $imagePost);
 	}
     public function sessionDestroy()
 	{

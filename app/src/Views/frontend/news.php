@@ -11,7 +11,7 @@
         <?php
             for ($i = 0; $i < count($post); $i = $i + 1) {
         ?>
-                <div id="new-<?= $i + 1 ?>" class="news-content news-content__desable">
+                <div id="new-<?= $i + 1 ?>" class="news-content news-content__desable" style="background-image: url('<?= $post[$i]->getImagePost() ?>'); background-size: cover;">
                     <a href="<?= $this->path ?>?action=new&id=<?= $post[$i]->getId()?>">
                         <div class="news-content-txt">
                             <h3 class="news-txt-title"><?= strtoupper($post[$i]->getTitle()); ?></h3>

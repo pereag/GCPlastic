@@ -7,7 +7,7 @@
 <div class="container">
     <section class="new">
         <div class="images-groupe new-image-groupe">
-            <img class="new-image" src="" alt="Photo de l'articles" style="background-image: url('<?= $this->path; ?>/public/images/<?= $post->getImagePost() ?>')">
+            <img class="new-image" style="background-image: url('<?= $post->getImagePost() ?>'); background-size: cover;">
         </div>
         <div class="new-txt">
             <h3 id="new-txt-title"><?= strtoupper($post->getTitle()) ?></h3>

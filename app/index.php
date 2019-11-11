@@ -62,9 +62,9 @@ try {
                 $backendController = new BackendController();
                 $backendController->newArticle();
             } elseif($_GET['action'] == 'addPost') {
-                if (!empty($_POST['title']) && !empty($_POST['content'])) {
+                if (!empty($_POST['title']) && !empty($_POST['content']) && !empty($_POST['imagePost'])) {
                 $backendController = new BackendController();
-                        $backendController->addPost(htmlspecialchars($_POST['title']), htmlspecialchars($_POST['content']));
+                        $backendController->addPost(htmlspecialchars($_POST['title']), htmlspecialchars($_POST['content']), htmlspecialchars($_POST['imagePost']));
                         header('location: index.php?action=articlesManagement');
                 } else {
                     throw new Exception('Les champs ne sont pas remplies');
@@ -89,7 +89,7 @@ try {
 				if (isset($_GET['id']) && $_GET['id'] > 0) {
 					if (!empty($_POST['title']) && !empty($_POST['content'])) {
 						$backendController = new BackendController();
-						$backendController->sendModifPost(htmlspecialchars($_POST['title']), htmlspecialchars($_POST['content']), htmlspecialchars($_GET['id']));
+						$backendController->sendModifPost(htmlspecialchars($_POST['title']), htmlspecialchars($_POST['content']), htmlspecialchars($_POST['imagePost']), htmlspecialchars($_GET['id']));
 						header('location: index.php?action=articlesManagement');
 					} else {
 						throw new Exception('Les champs n\'ons pas étais remplis');

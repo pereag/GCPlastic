@@ -10,7 +10,7 @@ class postsManager extends Manager
 {
     public function getPosts()
     {
-        $req = $this->db->query('SELECT id, title, imagePost, SUBSTRING(content,1,85) AS content, DATE_FORMAT(datePost, \'%d/%m/%Y\') AS datePost FROM posts ORDER BY datePost DESC');
+        $req = $this->db->query('SELECT id, title, imagePost, SUBSTRING(content,1,85) AS content, DATE_FORMAT(datePost, \'%d/%m/%Y\') AS datePost FROM posts ORDER BY id DESC');
         $aResp = $req->fetchAll(PDO::FETCH_ASSOC);
         if (!$aResp) {
             $obj = [];
@@ -38,7 +38,7 @@ class postsManager extends Manager
     
     public function getPostsAdmin()
     {
-        $req = $this->db->query('SELECT id, title, imagePost, SUBSTRING(content,1,85) AS content, DATE_FORMAT(datePost, \'%d/%m/%Y\') AS datePost FROM posts ORDER BY datePost DESC');
+        $req = $this->db->query('SELECT id, title, imagePost, SUBSTRING(content,1,85) AS content, DATE_FORMAT(datePost, \'%d/%m/%Y\') AS datePost FROM posts ORDER BY id DESC');
          $aResp = $req->fetchAll(PDO::FETCH_ASSOC);
          
         if (!$aResp) {
@@ -51,10 +51,10 @@ class postsManager extends Manager
         return $obj;
     }
 
-    public function createPostAdmin($title, $content)
+    public function createPostAdmin($title, $content, $imagePost)
     {
-        $post = $this->db->prepare('INSERT INTO posts( title, content, datePost) VALUES(?, ?,  NOW())');
-        $affectedPost = $post->execute(array($title, $content));
+        $post = $this->db->prepare('INSERT INTO posts( title, content, imagePost, datePost) VALUES(?, ?, ?,  NOW())');
+        $affectedPost = $post->execute(array($title, $content, $imagePost));
     return $affectedPost;
     }
     public function deletePostAdmin($id)
@@ -69,10 +69,10 @@ class postsManager extends Manager
         $req->execute(array($id));
         return new Post($req->fetch(PDO::FETCH_ASSOC));
     }
-    public function sendmodifPost($title, $content, $id)
+    public function sendmodifPost($title, $content, $imagePost, $id)
     {
-        $comments = $this->db->prepare('UPDATE posts SET title = ?, content = ?  WHERE id = ?');
-        $returnArticle = $comments->execute(array($title, $content, $id));
+        $comments = $this->db->prepare('UPDATE posts SET title = ?, content = ?, imagePost = ?  WHERE id = ?');
+        $returnArticle = $comments->execute(array($title, $content, $imagePost, $id));
         return $returnArticle;
     }
     
