@@ -1,8 +1,8 @@
 <?php 
     $title = "Contact";
     $bannerTitle = "CONTACT";
-    require_once "./src/Views/header.php";
-    require_once "./src/Views/banner.php";
+    require_once "./app/src/Views/header.php";
+    require_once "./app/src/Views/banner.php";
 ?>
 
 <div class="container">
@@ -22,4 +22,4 @@
     </section>
 </div>
 
-<?php require_once "./src/Views/footer.php"; 
+<?php require_once "./app/src/Views/footer.php"; 

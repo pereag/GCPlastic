@@ -1,8 +1,8 @@
 <?php 
     $title = "Actualités";
     $bannerTitle = "ACTUALITES";
-    require_once "./src/Views/header.php";
-    require_once "./src/Views/banner.php";
+    require_once "./app/src/Views/header.php";
+    require_once "./app/src/Views/banner.php";
 ?>
 
 <section class="news">
@@ -11,8 +11,8 @@
         <?php
             for ($i = 0; $i < count($post); $i = $i + 1) {
         ?>
-                <div id="new-<?= $i + 1 ?>" class="news-content news-content__desable" style="background-image: url('<?= $post[$i]->getImagePost() ?>'); background-size: cover;">
-                    <a href="<?= $this->path ?>?action=new&id=<?= $post[$i]->getId()?>">
+                <div id="new-<?= $i + 1 ?>" class="news-content news-content__desable" style="background-image: url('<?= $post[$i]->getImagePost() ?>'); background-size: cover; background-position: center;">
+                    <a href="?action=new&id=<?= $post[$i]->getId()?>">
                         <div class="news-content-txt">
                             <h3 class="news-txt-title"><?= strtoupper($post[$i]->getTitle()); ?></h3>
                             <p class="news-txt-p">
@@ -33,4 +33,4 @@
     </div> 
 </section>
 
-<?php require_once "./src/Views/footer.php";
+<?php require_once "./app/src/Views/footer.php";

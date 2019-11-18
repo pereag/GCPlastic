@@ -1,6 +1,6 @@
 <?php 
     $title = "Accueil";
-    require_once "./src/Views/header.php"; 
+    require_once "./app/src/Views/header.php"; 
 ?>
 
 <section id="slideshow">
@@ -34,8 +34,8 @@
     <div class="container">
         <h2>DERNIERE ACTUALITE</h2>
         <hr class="hr-yellow hr-center">
-        <div id="lnew-content" style="background-image: url('<?= $post->getImagePost() ?>'); background-repeat: no-repeat; background-size: cover;">
-        <a href="<?= $this->path ?>?action=new&id=<?= $post->getId() ?>">
+        <div id="lnew-content" style="background-image: url('<?= $post->getImagePost() ?>'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+        <a href="?action=new&id=<?= $post->getId() ?>">
             <div class="lnew-content-txt">
                 <h3 id="lnc-txt-title"><?= strtoupper($post->getTitle()) ?></h3>
                 <p id="lnc-txt-p">
@@ -47,4 +47,4 @@
         </div>
     </div>
 </section>
-<?php require_once "./src/Views/footer.php"; ?>
+<?php require_once "./app/src/Views/footer.php"; ?>

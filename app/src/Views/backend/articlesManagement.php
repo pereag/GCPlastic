@@ -1,8 +1,8 @@
 <?php 
     $title = "Espace d'administration";
     $bannerTitle = "ESPACE D'ADMINISTRATION";
-    require_once "./src/Views/header.php";
-    require_once "./src/Views/banner.php";
+    require_once "./app/src/Views/header.php";
+    require_once "./app/src/Views/banner.php";
 ?>  
     <div class="container">
         <section class="articlesManager">
@@ -23,7 +23,7 @@
                         <td><?= $post[$i]->getTitle() ?></td>
                         <td><?= $post[$i]->getContent() ?> ...</td>
                         <td><?= $post[$i]->getdatePost() ?></td>
-                        <th><a href="<?= $this->path ?>?action=updateArticle&id=<?= $post[$i]->getId() ?>">modifier</a> | <a href="<?= $this->path ?>?action=deletePostAdmin&id=<?= $post[$i]->getId() ?>">supprimer</a></th>
+                        <th><a href="?action=updateArticle&id=<?= $post[$i]->getId() ?>">modifier</a> | <a href="?action=deletePostAdmin&id=<?= $post[$i]->getId() ?>">supprimer</a></th>
                     </tr>
                 <?php
                     }
@@ -31,11 +31,11 @@
             </tbody>
         </table>
         <div class="button-div">
-            <a href="<?= $this->path ?>?action=newArticle"><button class="btn-yellow btn-large btn-articleManager">CREE UN NOUVEL ARTICLE</button></a>
+            <a href="?action=newArticle"><button class="btn-yellow btn-large btn-articleManager">CREE UN NOUVEL ARTICLE</button></a>
         </div>
         </section>
     </div>
    
 <?php 
-    require_once "./src/views/footer.php"; 
+    require_once "./app/src/views/footer.php"; 
 ?>

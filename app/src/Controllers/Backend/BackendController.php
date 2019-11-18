@@ -15,13 +15,13 @@ class BackendController {
         $post = $postsManager->getPosts();
         $titleAnimationScript = true;
         $datatableScript = true;
-        require_once "./src/Views/backend/articlesManagement.php";
+        require_once "./app/src/Views/backend/articlesManagement.php";
         $path = $this->path;
     }
     public function newArticle()
     {
         $titleAnimationScript = true;
-        require_once "./src/Views/backend/newArticle.php";
+        require_once "./app/src/Views/backend/newArticle.php";
         $path = $this->path;
 
     }
@@ -30,7 +30,7 @@ class BackendController {
         $postsManager = new PostsManager();
         $post = $postsManager->getPost($id);
         $titleAnimationScript = true;
-        require_once "./src/Views/backend/updateArticle.php";
+        require_once "./app/src/Views/backend/updateArticle.php";
         $path = $this->path;
     }
     public function sendModifPost($title, $content, $imagePost, $id) 

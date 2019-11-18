@@ -16,28 +16,28 @@
         <a href="<?= $this->path; ?>"><img class="logo" src="<?= $this->path; ?>/public/images/logo.png" alt="Logo GC Plastic"></a>
         <nav class="hnav">
             <div class="hnav-accueil hnav-a">
-                <a href="<?= $this->path ?>?action=home">
+                <a href="?action=home">
                     ACCUEIL
                 </a>
             </div>
             
             <div class="hnav-services hnav-a">
-                <a href="<?= $this->path ?>?action=services">
+                <a href="?action=services">
                     SERVICES
                 </a>
             </div>
             <div class="hnav-machines hnav-a">
-                <a href="<?= $this->path ?>?action=park">
+                <a href="?action=park">
                     PARC MACHINES
                 </a>
             </div>
             <div class="hnav-actualites hnav-a">
-                <a href="<?= $this->path ?>?action=news">
+                <a href="?action=news">
                     ACTUALITES
                 </a>
             </div>
             <div class="hnav-contact hnav-a">
-                <a href="<?= $this->path ?>?action=contact">
+                <a href="?action=contact">
                     CONTACT
                 </a>
             </div>
@@ -47,11 +47,11 @@
     <div class="out-header"></div>
     <div id="mobileMenu" class="mobileMenu_disable">
         <ul id ="mobileMenu-buttonGroupe">
-        <a href="<?= $this->path ?>?action=home"><li>ACCUEIL</li></a>
-            <a href="<?= $this->path ?>?action=services"><li>SERVICES</li></a>
-            <a href="<?= $this->path ?>?action=park"><li>PARC MACHINES</li></a>
-            <a href="<?= $this->path ?>?action=news"><li>ACTUALITES</li></a>
-            <a href="<?= $this->path ?>?action=contact"><li>CONTACT</li></a>
+        <a href="?action=home"><li>ACCUEIL</li></a>
+            <a href="?action=services"><li>SERVICES</li></a>
+            <a href="?action=park"><li>PARC MACHINES</li></a>
+            <a href="?action=news"><li>ACTUALITES</li></a>
+            <a href="?action=contact"><li>CONTACT</li></a>
         </ul>
     </div>
     <div id="mobileMenu-background" class="mobileMenu-background_disable"></div>

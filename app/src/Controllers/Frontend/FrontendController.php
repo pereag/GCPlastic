@@ -17,14 +17,14 @@ class FrontendController {
         $postsManager = new PostsManager();
         $post = $postsManager->getLastPost();
         $slideshowScript = true;
-        require_once "./src/Views/frontend/home.php";
+        require_once "./app/src/Views/frontend/home.php";
         $path = $this->path;
     }
     public function services()
     {
         $titleAnimationScript = true;
         $servicesScript = true;
-        require_once "./src/Views/frontend/services.php";
+        require_once "./app/src/Views/frontend/services.php";
         $path = $this->path;
 
     }
@@ -32,7 +32,7 @@ class FrontendController {
     {
         $titleAnimationScript = true;
         $parkScript = true;
-        require_once "./src/Views/frontend/park.php";
+        require_once "./app/src/Views/frontend/park.php";
         $path = $this->path;
 
     }
@@ -42,7 +42,7 @@ class FrontendController {
         $post = $postsManager->getPosts();
         $titleAnimationScript = true;
         $pagingScript = true;
-        require_once "./src/Views/frontend/news.php";
+        require_once "./app/src/Views/frontend/news.php";
         $path = $this->path;
 
     }
@@ -51,7 +51,7 @@ class FrontendController {
         $titleAnimationScript = true;
         $postsManager = new postsManager();
         $post = $postsManager->getPost($id);
-        require_once "./src/Views/frontend/new.php";
+        require_once "./app/src/Views/frontend/new.php";
         $path = $this->path;
 
     }
@@ -59,14 +59,14 @@ class FrontendController {
     {
         $titleAnimationScript = true;
         $contactScript = true;
-        require_once "./src/Views/frontend/contact.php";
+        require_once "./app/src/Views/frontend/contact.php";
         $path = $this->path;
 
     }
     public function admin()
     {
         $titleAnimationScript = true;
-        require_once "./src/Views/frontend/adminForm.php";
+        require_once "./app/src/Views/frontend/adminForm.php";
         $path = $this->path;
 
     }
@@ -81,6 +81,6 @@ class FrontendController {
         $mail->sendEmail($lastName, $firstName, $email, $society, $message);
     }
     public function displayError($error) {
-        require_once "./src/Views/frontend/error.php";
+        require_once "./app/src/Views/frontend/error.php";
     }
 }

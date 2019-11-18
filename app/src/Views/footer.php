@@ -16,14 +16,14 @@
             <div class="fdiv fdiv-white fdiv-5">
             <?php 
             if(!empty($_SESSION) && isset($_SESSION['auth'])) {
-                echo '<span><a href="' .$this->path. '?action=articlesManagement">Tableau de bord</a> | <a href="' .$this->path. '?action=sessionDestroy">Déconnexion</a></span>';
+                echo '<span><a href="?action=articlesManagement">Tableau de bord</a> | <a href="?action=sessionDestroy">Déconnexion</a></span>';
             } else {
                 echo '<span><a href="' .$this->path. '?action=admin">Administration</a></span>';
             } ?>
                 <span>Copyright © 2019</span><br>
                 <span>GC Plastic</span><br>
                 <span>Tous droits réservés</span><br>
-                <span><a href="<?= $this->path; ?>?action=legalNotice">Mentions légales</a></span>
+                <span><a href="?action=legalNotice">Mentions légales</a></span>
             </div>
             <div class="fdiv fdiv-6"></div>
         </footer>

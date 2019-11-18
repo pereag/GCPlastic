@@ -15,13 +15,13 @@ class Mail {
 		<html>
 			<body>
 				<div align="left">
-					<br />
-					<u>Nom de l\'expéditeur</u> :'.$lastName.' ' .$firstName. '<br />
-                    <u>Mail de l\'expéditeur</u> :'.$email.'<br />
-                    <u>Société de l\'expediteur</u> : '.$society.'<br />
-					<br />
+					<br/>
+					<u>Nom de l\'expéditeur</u> :'.$lastName.' ' .$firstName. '<br/>
+                    <u>Mail de l\'expéditeur</u> :'.$email.'<br/>
+                    <u>Société de l\'expediteur</u> : '.$society.'<br/>
+					<br/>
 					'.nl2br($message).'
-					<br />
+					<br/>
 				</div>
 			</body>
 		</html>

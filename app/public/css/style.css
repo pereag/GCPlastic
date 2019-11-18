@@ -654,8 +654,8 @@ footer {
 ----------------------------------------------------------------------------------------------------------------------------*/
 .updateArticle-image {
     background: grey;
-    width: 1040px;
-    height: 432px;
+    max-width: 100%;
+    max-height: 432px;
     margin: 30px auto 30px auto;
 }
 .updateArticle-imageForm {
