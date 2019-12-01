@@ -21,7 +21,7 @@ class Contact {
         let regexMail = RegExp(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
         if(regexTxt.test(this.lastname.val()) && regexTxt.test(this.firstname.val()) && regexMail.test(this.email.val()) && regexTxt.test(this.message.val())) {
             jQuery.ajax({
-                url: "http://localhost/GCPlastic/app/?action=sendEmail",
+                url: "http://localhost/GCPlastic/?action=sendEmail",
                 data:'lastname='+this.lastname.val()+'&firstname='+
                 this.firstname.val()+'&email='+
                 this.email.val()+'&message='+

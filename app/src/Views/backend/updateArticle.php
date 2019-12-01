@@ -1,6 +1,7 @@
 <?php 
     $title = "Modification d'article";
     $bannerTitle = "MODIFICATION D'ARTICLE";
+    $bannerTxt = "Veuillez modifier les champs d'informations désirés.";
     require_once "./app/src/Views/header.php";
     require_once "./app/src/Views/banner.php";
 ?>

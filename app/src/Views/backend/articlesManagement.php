@@ -1,6 +1,7 @@
 <?php 
     $title = "Espace d'administration";
     $bannerTitle = "ESPACE D'ADMINISTRATION";
+    $bannerTxt = "Cette page vous permet de gérer les articles de votre site.";
     require_once "./app/src/Views/header.php";
     require_once "./app/src/Views/banner.php";
 ?>  

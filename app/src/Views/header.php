@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <a href="<?= $this->path; ?>"><img class="logo" src="<?= $this->path; ?>/public/images/logo.png" alt="Logo GC Plastic"></a>
+        <a href="?action=home"><img class="logo" src="<?= $this->path; ?>/public/images/logo.png" alt="Logo GC Plastic"></a>
         <nav class="hnav">
             <div class="hnav-accueil hnav-a">
                 <a href="?action=home">

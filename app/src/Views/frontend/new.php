@@ -1,6 +1,7 @@
 <?php 
     $title = "Actualités";
     $bannerTitle = "ACTUALITES";
+    $bannerTxt = "Toutes les actualités de GC Plastic sont disponibles sur ces pages.";
     require_once "./app/src/Views/header.php";
     require_once "./app/src/Views/banner.php";
 ?>

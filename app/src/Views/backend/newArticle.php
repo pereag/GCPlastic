@@ -1,6 +1,7 @@
 <?php 
     $title = "Création d'article";
     $bannerTitle = "CREATION D'ARTICLE";
+    $bannerTxt = "Veuillez remplir les champs du formulaire.";
     require_once "./app/src/Views/header.php";
     require_once "./app/src/Views/banner.php";
 ?>

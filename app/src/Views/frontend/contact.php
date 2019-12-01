@@ -1,6 +1,7 @@
 <?php 
     $title = "Contact";
     $bannerTitle = "CONTACT";
+    $bannerTxt = "Nous sommes à votre écoute, n'hésitez pas à nous contacter.";
     require_once "./app/src/Views/header.php";
     require_once "./app/src/Views/banner.php";
 ?>

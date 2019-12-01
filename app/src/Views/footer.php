@@ -18,7 +18,7 @@
             if(!empty($_SESSION) && isset($_SESSION['auth'])) {
                 echo '<span><a href="?action=articlesManagement">Tableau de bord</a> | <a href="?action=sessionDestroy">Déconnexion</a></span>';
             } else {
-                echo '<span><a href="' .$this->path. '?action=admin">Administration</a></span>';
+                echo '<span><a href="?action=admin">Administration</a></span>';
             } ?>
                 <span>Copyright © 2019</span><br>
                 <span>GC Plastic</span><br>

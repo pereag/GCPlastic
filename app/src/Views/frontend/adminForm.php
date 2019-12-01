@@ -1,8 +1,9 @@
 <?php 
     $title = "Administration";
     $bannerTitle = "ADMINISTRATION";
-    require_once "./src/Views/header.php";
-    require_once "./src/Views/banner.php";
+    $bannerTxt = "Cette page de connexion est réservé à l'administration du site.";
+    require_once "./app/src/Views/header.php";
+    require_once "./app/src/Views/banner.php";
 ?>
 
 <div class="container">
@@ -16,5 +17,5 @@
 </div>
 
 <?php 
-    require_once "./src/views/footer.php"; 
+    require_once "./app/src/views/footer.php"; 
 ?>
