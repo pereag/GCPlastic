@@ -5,13 +5,18 @@ class MobileMenu {
         this.buttonsMobilesMenu = buttonsMobilesMenu;
         this.contentMobileMenu = contentMobileMenu;
     }
+
+    
+//On initialise les élèments du menu
     init(){
         this.displayContentMobileMenu(this.buttonMobileMenu);
         this.displayContentMobileMenu(this.backgroundMobileMenu);
         this.displayContentMobileMenu(this.buttonsMobilesMenu);
         this.listenSizeWindow();
     };
-    
+
+
+//On écoute l'élèment et change la valeurs de la class ou non, si l'élèment est cliqué
     displayContentMobileMenu(element){
         element.addEventListener("click", ()=>{
             if(this.contentMobileMenu.classList.contains("mobileMenu_disable")){
@@ -28,7 +33,9 @@ class MobileMenu {
             };
         });
     }; 
-// Écoute la largeur de l'écran 
+
+
+// Écoute la largeur de l'écran toute les 150 000 secondes pour verifier les classes à appliquer
     listenSizeWindow(){
         setInterval(() => {
             if(window.innerWidth > 1100) {

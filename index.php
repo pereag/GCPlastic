@@ -8,6 +8,7 @@ session_start();
 
 try {
     if(!empty($_GET['action'])) {
+    //-------------------- Front office -------------------- 
         if($_GET['action'] == 'home') {
             $frontendController = new FrontendController();
             echo $frontendController->home();
@@ -54,6 +55,7 @@ try {
             } else {
                 throw new Exception('Veuiller remplire le formulaire');
             }
+    //--------------------- Back office ----------------------
         } elseif ($_SESSION) {
             if($_GET['action'] == 'articlesManagement') {
                 $backendController = new Backendcontroller();

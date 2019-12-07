@@ -25,12 +25,15 @@ class Slideshow {
         }, this.time)
     };
 
+
 // Initialise les bouttons du diaporama
     init(){
         this.manualPlay(this.leftButton);
         this.manualPlay(this.rightButton);
         this.manualPlay(this.stopButton);
     };
+
+
 // Change le background du diaporama à chaque changement de diapo
     changeImage() {
         if(this.mobileVersion == false) {
@@ -42,11 +45,14 @@ class Slideshow {
             this.id.style.backgroundSize = '100%';
         };
     };
+
+
 // Affiche l'image précedente 
     previous(){
         this.image = this.image - 1;
         this.changeImage();
     };
+
 
 // Affiche l'image suivante 
     next() {
@@ -54,11 +60,13 @@ class Slideshow {
         this.changeImage();
     };
     
+
 // Arrete le diaporama 
     stop() {
         clearInterval(this.autoPlay);
         this.autoPlay = null;
     };
+
 
 // Redémarre le diaporama 
     restart() {
@@ -74,11 +82,13 @@ class Slideshow {
         }, this.time);
     };
 
+
 // Affiche le premier diapo
     goFirstImage(){
         this.image = 1;
         this.changeImage();
     };
+
 
 // Affiche le bouton de lecture
     displayStopButton(){
@@ -89,6 +99,7 @@ class Slideshow {
             document.getElementById("slideshow-pausePlayButton").classList.replace("mouseOn", "mouseOut");
         });
     };
+
 
 // Change la taille de la hauteur en temps réel du diaporama
     listenWidthEvent() {
@@ -108,6 +119,7 @@ class Slideshow {
         }, 100);
     };
 
+    
 // Vérifie un bouton ou une touche du clavier et applique l'action correspondant
     manualPlay(button){
         this.listenWidthEvent();
@@ -187,6 +199,5 @@ class Slideshow {
         });
     };
 };
-console.log("yolo")
 let slideshow = new Slideshow(document.getElementById("slideshow"), document.getElementById("sarrow-left"), document.getElementById("sarrow-right"), document.getElementById("sstop-button"), document.getElementById("splay"), document.getElementById("spause"), "sstop-button__active", "sstop-button__desable", 5000)
 slideshow.init();

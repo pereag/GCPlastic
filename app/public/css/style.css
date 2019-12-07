@@ -407,6 +407,17 @@ footer {
     display: table-cell;
     vertical-align: middle;
 }
+
+#home-alert {
+    text-align: center;
+    margin: 120px 20px 50px 20px;
+}
+.home-alert__desable {
+    display: none;
+}
+.home-alert__active {
+    display: block;
+}
 /*--------------------------------------------------------------------------------------------------------------------------
                                                         Parc machines
 ----------------------------------------------------------------------------------------------------------------------------*/
@@ -511,6 +522,10 @@ footer {
 
 .news-content__desable {
     display: none;
+}
+#news-alert {
+    text-align: center;
+    margin: 50px;
 }
 /*--------------------------------------------------------------------------------------------------------------------------
                                                         actualité
@@ -691,7 +706,7 @@ footer {
 }
 @media screen and (max-width: 885px) {
     .banner {
-        padding: 0px 20% 0px 20%; 
+        padding: 0px 15% 0px 15%; 
     }
     .banner p {
         width: auto;

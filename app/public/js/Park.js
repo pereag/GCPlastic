@@ -13,6 +13,7 @@ class Park {
       this.btnGrinding = btnGrinding;
    } 
 
+
    play() {
       this.display(this.btnMilling);
       this.display(this.btnTower);
@@ -21,9 +22,10 @@ class Park {
       this.display(this.btnGrinding);
    }
 
+   
+// Controle l'affichage des catégories de machines
    display(btn){
       btn.bind("click", ()=> {
-         console.log("yolo");
          this.park.removeClass("park__active");
          this.park.addClass("park__desable");
          if(btn == this.btnMilling){
@@ -31,7 +33,6 @@ class Park {
             this.milling.addClass("park__active");
          }
          else if(btn == this.btnTower){
-            console.log("YOLO")
             this.tower.removeClass("park__desable");
             this.tower.addClass("park__active");
          }

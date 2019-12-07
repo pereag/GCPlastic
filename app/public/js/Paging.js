@@ -1,5 +1,6 @@
 class Paging {
-    constructor(page, articleNew, pagingId, btnPrevious, btnNext, limiteArtcles, anchor) {
+    constructor(alert, page, articleNew, pagingId, btnPrevious, btnNext, limiteArtcles, anchor) {
+        this.alert = alert;
         this.page = page;
         this.articleNew = articleNew;
         this.pagingId = pagingId;
@@ -9,14 +10,16 @@ class Paging {
         this.anchor = anchor;
     }
 
+
     play() {
-            let a = this.articleNew.length / this.limiteArticles;
-        // On calcule le nombre de page maximum
-            this.pageNbr = Math.ceil(a);
-        // On crée un objet Page par page 
-            for ( let i = 1; i < this.pageNbr + 1; i++) {
-               new Page(i, this.limiteArticles, this.articleNew, this.page, this.btnPrevious, this.btnNext).play();
-            }
+        this.DeleteAlert();
+        let a = this.articleNew.length / this.limiteArticles;
+    // On calcule le nombre de page maximum
+        this.pageNbr = Math.ceil(a);
+    // On crée un objet Page par page 
+        for ( let i = 1; i < this.pageNbr + 1; i++) {
+        new Page(i, this.limiteArticles, this.articleNew, this.page, this.btnPrevious, this.btnNext).play();
+        }
     // on ecoute le click des boutons 
         this.btnPrevious.click(() => {
             this.btnPreviousClick();
@@ -34,10 +37,20 @@ class Paging {
         }
     }
 
-// Allé jusqu'à l'ancre
+
+// Supprimer l'alerte si il y a des articles
+    DeleteAlert(){
+        if(this.articleNew.length > 0){
+            this.alert.remove();
+        }
+    }
+    
+
+// Aller jusqu'à l'ancre
     goToAnchor() {
         $("html, body").stop().animate( { scrollTop: this.anchor.offset().top }, 1500);
     }
+
 
     btnPreviousClick() {
     // Si on est pas sur la page 
@@ -60,6 +73,7 @@ class Paging {
             }      
         }
     }
+
 
     btnNextClick() {
     // Si on est pas sur la derniere page
@@ -85,5 +99,5 @@ class Paging {
         }
     }
 }
-let paging = new Paging($("#page"), $(".news-content"), $("#paging"), $("#paging-previous"), $("#paging-next"), 2, $(".hr-yellow"))
+let paging = new Paging($("#news-alert"), $("#page"), $(".news-content"), $("#paging"), $("#paging-previous"), $("#paging-next"), 2, $(".hr-yellow"))
 paging.play();

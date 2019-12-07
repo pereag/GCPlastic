@@ -9,6 +9,7 @@
 <section class="news">
     <div class="container">
         <div id="page" class="page-1">
+        <p id="news-alert">Aucun article disponible.</p>
         <?php
             for ($i = 0; $i < count($post); $i = $i + 1) {
         ?>

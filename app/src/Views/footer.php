@@ -44,6 +44,7 @@
         <?php } if(isset($slideshowScript) && $slideshowScript) {
             ?>
             <script type="text/javascript" src="<?= $this->path ?>/public/js/Slideshow.js"></script>
+            <script type="text/javascript" src="<?= $this->path ?>/public/js/HomeArticle.js"></script>
         <?php } if(isset($parkScript) && $parkScript) {
             ?>
             <script type="text/javascript" src="<?= $this->path ?>/public/js/Park.js"></script>

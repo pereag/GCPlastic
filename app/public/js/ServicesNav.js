@@ -13,12 +13,17 @@ class ServicesNav {
         this.anchor = anchor;
     }
 
+    
+// Initialise les boutons 
     play(){
         this.clickbutton(this.btnTools);
         this.clickbutton(this.btnMaintenance);
         this.clickbutton(this.btnMachining);
         this.clickbutton(this.btnPrototype);
     }
+
+
+//Ecoute le boutton et distribue l'action associé
     clickbutton(btn){
         btn.addEventListener("click", () => {
             this.toolsContent.classList.replace("content__active", "content__desactive");
@@ -42,15 +47,17 @@ class ServicesNav {
         })
     }
 
+
+//Scroll jusqu'à l'ancre designé
     goToAnchor() {
         $("html, body").stop().animate( { scrollTop: this.anchor.offset().top }, 1500);
     }
 }
 
-let servicesNav = new ServicesNav(document.getElementById("services-nav"), document.getElementById("tools"), document.getElementById("maintenance"),
-                             document.getElementById("machining"), document.getElementById("prototype"),
-                             document.getElementById("tools-content"), document.getElementById("maintenance-content"),
-                             document.getElementById("machining-content"), document.getElementById("prototype-content"),
-                             $("#prototype h3"));
+let servicesNav = new ServicesNav(document.getElementById("services-nav"), document.getElementById("tools"), 
+                                document.getElementById("maintenance"), document.getElementById("machining"), 
+                                document.getElementById("prototype"), document.getElementById("tools-content"), 
+                                document.getElementById("maintenance-content"), document.getElementById("machining-content"), 
+                                document.getElementById("prototype-content"), $("#prototype h3"));
 
 servicesNav.play();

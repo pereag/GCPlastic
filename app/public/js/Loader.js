@@ -2,12 +2,11 @@ class Loader {
     constructor(pageLoader){
         this.pageLoader = pageLoader;
     }
-// Change la clave de la div loader 
+// Change la classe de la div du loader
     play(){
-        console.log(this.pageLoader)
         window.setTimeout(() => {
         this.pageLoader.classList.add("desactive-loader");
-        }, 500 )
+        }, 500 );
     };
 
 };

@@ -34,6 +34,7 @@
     <div class="container">
         <h2>DERNIERE ACTUALITE</h2>
         <hr class="hr-yellow hr-center">
+        <p id="home-alert" class="home-alert__desable">Aucun article à afficher</p>
         <div id="lnew-content" style="background-image: url('<?= $post->getImagePost() ?>'); background-repeat: no-repeat; background-size: cover; background-position: center;">
         <a href="?action=new&id=<?= $post->getId() ?>">
             <div class="lnew-content-txt">

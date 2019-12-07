@@ -9,6 +9,7 @@ class Page {
 
     }
 
+
     play(){
         let i = 0;
         while (i <= this.limitArticles) {
@@ -22,6 +23,7 @@ class Page {
             this.displayPage()
         })
     }
+    
     
     displayPage() {
     //Si la class de la page == a cette objet Page 

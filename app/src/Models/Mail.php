@@ -27,6 +27,6 @@ class Mail {
 		</html>
 		';
 
-		mail("perello.valentinpro@gmail.com", "Contact - GCPlastic.com", $message, $header);
+		mail("gcplasticpro@gmail.com", "Contact - GCPlastic.com", $message, $header);
     }
 }

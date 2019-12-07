@@ -9,17 +9,22 @@ class Contact {
         this.statusForm = statusForm;
     }
 
+    
     play(){
-        console.log('script en cours');
+    //On écoutes le bouton du formulaire
         this.contactButton.on('click', () => {
            this.mailVerif();
         });
     };
+
+
     mailVerif(){
         console.log("buton formulaire cliqué");
         let regexTxt = RegExp(/^[a-zA-ZàâæçéèêëîïôœùûüÿÀÂÆÇnÉÈÊËÎÏÔŒÙÛÜŸ]+$/);
         let regexMail = RegExp(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+    //On vérifie si les données 
         if(regexTxt.test(this.lastname.val()) && regexTxt.test(this.firstname.val()) && regexMail.test(this.email.val()) && regexTxt.test(this.message.val())) {
+        //On envois la requête Ajax avec les valeurs du formulaires
             jQuery.ajax({
                 url: "http://localhost/GCPlastic/?action=sendEmail",
                 data:'lastname='+this.lastname.val()+'&firstname='+
@@ -37,6 +42,7 @@ class Contact {
             });
         }
         else {
+        //Si les données sont invalides, on envois un message d'erreur sous le formulaire 
             this.statusForm.text('Formulaire incomplet ou email invalide.');
         }
     }
@@ -44,9 +50,3 @@ class Contact {
 
 contact = new Contact($('#buttonContact'), $('#lastnameContact'), $('#firstnameContact'), $('#emailContact'), $('#societyContact'), $('#messageContact'), $('#statut-form-contact'));
 contact.play();
-
-/* 1 Ecoute le formulaire  OK
-   2 Si on clique sur le boutton envoyer on verifie les informations du formulaire OK
-   3 Si le tout est ok on crée une variable data qui contiendra les informations du formulaire
-   4 on envois le la variable data via post au script php qui va  envoyer le mail sur la messagerie de GC plastic
-*/

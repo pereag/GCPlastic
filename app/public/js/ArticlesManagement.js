@@ -4,6 +4,7 @@ class ArticlesManagement {
     }
     play(){
         $(document).ready(function() {
+        //On change la langue de l'Api
             $('#tableArticles').DataTable({
                 "language": {
                     "sProcessing":     "Traitement en cours...",
