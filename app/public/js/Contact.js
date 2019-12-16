@@ -33,7 +33,8 @@ class Contact {
                 this.message.val()+'&society='+
                 this.society.val(),
                 type: "POST",
-                success: () => {
+                success: (data,textStatus,request) => {
+                    console.log(request.getResponseHeader('Content-Type'));
                     this.statusForm.text('Message envoyé.');
                 },
                 error: () => {

@@ -9,6 +9,6 @@
     <title>GC Plastic | Erreur</title>
 </head>
     <body>
-        <p class="error">Erreur : <?php echo $error->getMessage(); ?>.</p>
+        <p class="error">Erreur : <?= $error->getMessage(); ?>.</p>
     </body>
 </html>

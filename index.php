@@ -44,6 +44,9 @@ try {
         } elseif($_GET['action'] == 'admin') {
             $frontendController = new FrontendController();
             echo $frontendController->admin();
+        } elseif($_GET['action'] == 'legalNotice') {
+            $frontendController = new FrontendController();
+            echo $frontendController->legalNotice();
         } elseif($_GET['action'] == 'verifyLogin') {
             if (!empty($_POST['pseudo']) && !empty($_POST['password'])) {
             $frontendController = new FrontendController();
@@ -64,10 +67,10 @@ try {
                 $backendController = new BackendController();
                 $backendController->newArticle();
             } elseif($_GET['action'] == 'addPost') {
-                if (!empty($_POST['title']) && !empty($_POST['content']) && !empty($_POST['imagePost'])) {
-                $backendController = new BackendController();
-                        $backendController->addPost(htmlspecialchars($_POST['title']), htmlspecialchars($_POST['content']), htmlspecialchars($_POST['imagePost']));
-                        header('location: index.php?action=articlesManagement');
+                if (!empty($_POST['title']) && !empty($_POST['content']) && $_FILES['imagePost']['error'] == 0) {
+                    $backendController = new BackendController();
+                    $backendController->addPost(htmlspecialchars($_POST['title']), htmlspecialchars($_POST['content']), $_FILES['imagePost']);
+                    header('location: index.php?action=articlesManagement');
                 } else {
                     throw new Exception('Les champs ne sont pas remplies');
                 }
@@ -90,9 +93,9 @@ try {
             } elseif ($_GET['action'] == 'sendModifPost') {
 				if (isset($_GET['id']) && $_GET['id'] > 0) {
 					if (!empty($_POST['title']) && !empty($_POST['content'])) {
-						$backendController = new BackendController();
-						$backendController->sendModifPost(htmlspecialchars($_POST['title']), htmlspecialchars($_POST['content']), htmlspecialchars($_POST['imagePost']), htmlspecialchars($_GET['id']));
-						header('location: index.php?action=articlesManagement');
+                            $backendController = new BackendController();
+						    $backendController->sendModifPost(htmlspecialchars($_POST['title']), htmlspecialchars($_POST['content']), $_FILES['imagePost'],  htmlspecialchars($_GET['id']));
+                            header('location: index.php?action=articlesManagement');
 					} else {
 						throw new Exception('Les champs n\'ons pas étais remplis');
 					}

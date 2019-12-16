@@ -80,6 +80,11 @@ class FrontendController {
         $mail = new Mail();
         $mail->sendEmail($lastName, $firstName, $email, $society, $message);
     }
+    public function legalNotice()
+    {
+        $titleAnimationScript = true;
+        require_once "./app/src/Views/frontend/legalNotice.php";
+    }
     public function displayError($error) {
         require_once "./app/src/Views/frontend/error.php";
     }

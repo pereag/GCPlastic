@@ -20,9 +20,9 @@
             } else {
                 echo '<span><a href="?action=admin">Administration</a></span>';
             } ?>
-                <span>Copyright © 2019</span><br>
-                <span>GC Plastic</span><br>
-                <span>Tous droits réservés</span><br>
+                <span>Copyright © 2019</span>
+                <span>GC Plastic</span>
+                <span>Tous droits réservés</span>
                 <span><a href="?action=legalNotice">Mentions légales</a></span>
             </div>
             <div class="fdiv fdiv-6"></div>
@@ -61,6 +61,5 @@
         <?php } ?>
         <script type="text/javascript" src="<?= $this->path ?>/public/js/Loader.js"></script>
         <script type="text/javascript" src="<?= $this->path ?>/public/js/MobileMenu.js"></script>
-        <div style="background:pink;color:#333;position:fixed;right:0;bottom:0;z-index:99999999;font:1em arial;opacity:.9" id="ld"></div><script>setInterval(function(){if($(window).height()>=$(document).height()){$('#ld').text($(document).width()+' px');}else{$('#ld').text($(document).width()+17+' px');}},150);</script>
     </body>
 </html>
