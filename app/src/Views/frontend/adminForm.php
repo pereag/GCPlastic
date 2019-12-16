@@ -16,6 +16,4 @@
     </section>
 </div>
 
-<?php 
-    require_once "./app/src/views/footer.php"; 
-?>
+<?php require_once "./app/src/Views/footer.php"; 
