@@ -8,7 +8,10 @@
 <div class="container">
     <section class="new">
         <div class="images-groupe new-image-groupe">
-            <img class="new-image" style="background-image: url('<?= $post->getImagePost() ?>'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+            <div class="new-image" style="background: url('<?= $post->getImagePost() ?>'); background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+"></div>
         </div>
         <div class="new-txt">
             <h3 id="new-txt-title"><?= strtoupper($post->getTitle()) ?></h3>

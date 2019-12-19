@@ -41,8 +41,8 @@ class BackendController {
         $imageUpload = new ImageUpload();
         
         if ($imagePost['error'] == 0 ){
-            $imageUpload->removeImage($oldImagePost);
             $imagePost = $imageUpload->checkImage($imagePost);
+            $imageUpload->removeImage($oldImagePost);
         } else {
             $imagePost = $oldImagePost;
         }

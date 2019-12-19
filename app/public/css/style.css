@@ -553,6 +553,9 @@ footer {
     height: 500px;
     background-color: grey;
     margin: 30px auto 30px auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .new-image-groupe {
     margin: auto;

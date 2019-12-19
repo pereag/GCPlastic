@@ -102,10 +102,22 @@ try {
 				} else {
 					throw new Exception('L\'id du billet est invalide');
 				}
-			} elseif ($_GET['action'] == 'sessionDestroy') {
+			} elseif ($_GET['action'] == 'errorSizeImageUpdate') {
+
+                throw new Exception("L'image est trop grande");
+
+            } elseif ($_GET['action'] == 'errorSendFile') {
+
+                throw new Exception("Envois de l'image a échoué");
+
+            } elseif ($_GET['action'] == 'errorFileImageUpdate') {
+
+                throw new Exception("Le document envoyé n'est pas une image");
+
+            } elseif ($_GET['action'] == 'sessionDestroy') {
 				$backendController = new BackendController();
 				$backendController->sessionDestroy();
-				header('location: index.php');
+			    header('location: index.php');
 			} else {
 				throw new Exception('Session expirée ou page introuvable');
 			}

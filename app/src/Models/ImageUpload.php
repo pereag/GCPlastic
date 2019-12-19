@@ -6,12 +6,12 @@ class ImageUpload {
 
     function checkImage($image)
     {
-        var_dump($maxSize = 200000);
+        var_dump($maxSize = 400000);
         $validExt = array('.jpg','.png','.gif','.jpeg');
 
         if($image['error'] > 0)
         {
-            echo "Une erreur est arrivée lors du transfert";
+            header('location: index.php?action=errorSendFile');
             die;
         }
 
@@ -19,7 +19,7 @@ class ImageUpload {
 
         if($fileSize > $maxSize)
         {
-            echo $fileSize;
+            header('location: index.php?action=errorSizeImageUpdate');
             die;
         }
 
@@ -27,7 +27,7 @@ class ImageUpload {
         $fileExt = ".".strtolower(substr(strrchr($image['name'],'.'),1));
 
         if(!in_array($fileExt, $validExt)){
-            echo "Le fichier n'est pas une image";
+            header('location: index.php?action=errorFileImageUpdate');
             die;
         }
         $tmpName = $image['tmp_name'];
