@@ -21,7 +21,7 @@
     <div class="pimg-tools"></div>
     <div class="p-text">
         <h2>QUI SOMME NOUS ?</h2>
-        <hr class="hr-yellow hr-presentation">
+        <hr align="left" class="hr-yellow hr-presentation">
         <p>
         GC PLASTIC est spécialisée dans la fabrication de moules métalliques depuis plus de 30 ans.
         Notre société fabrique des moules métalliques pour l’industrie plastique, la fonderie d’aluminium et de zamac.

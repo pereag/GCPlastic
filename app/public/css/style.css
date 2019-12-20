@@ -31,14 +31,12 @@ p{
 }
 .hr-banner {
     width: 134px;
-    margin-right: 0;
 }
 .hr-center {
     width: 150px;
 }
 .hr-presentation {
     width: 134px;
-    margin-left: 0;
 }
 a {
     color: white;
@@ -690,8 +688,7 @@ footer {
 ----------------------------------------------------------------------------------------------------------------------------*/
 .updateArticle-image {
     background: grey;
-    max-width: 100%;
-    max-height: 432px;
+    max-width: 50%;
     margin: 30px auto 30px auto;
 }
 .updateArticle-imageForm {
@@ -841,6 +838,9 @@ footer {
     #spause {
         width: 20px;
         height: 31px;
+    }
+    .updateArticle-image {
+        max-width:100%;
     }
 
 }
